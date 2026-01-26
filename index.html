@@ -3,84 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>84.6 | LE CODEX OPÉRATIONNEL</title>
+    <title>84.6 | LE CODEX UNIVERSEL</title>
     <style>
         :root { --green: #00ff00; --dark: #050505; --gray: #333; --glow: rgba(0, 255, 0, 0.2); }
-        body { background-color: #000; color: #f0f0f0; font-family: 'Courier New', monospace; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; }
-        .box { border: 1px solid var(--gray); padding: 30px; max-width: 900px; background: var(--dark); box-shadow: 0 0 60px var(--glow); position: relative; width: 100%; box-sizing: border-box; }
-        h1 { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 10px; letter-spacing: 8px; font-size: 2.2em; text-align: center; margin-top: 20px; text-transform: uppercase; }
-        .status-bar { background: #111; border: 1px solid var(--gray); padding: 10px; font-size: 0.75em; margin-bottom: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; }
+        body { background-color: #000; color: #f0f0f0; font-family: 'Courier New', monospace; margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .box { border: 1px solid var(--gray); padding: 30px; background: var(--dark); box-shadow: 0 0 60px var(--glow); position: relative; }
+        
+        header { text-align: center; border-bottom: 2px solid #fff; margin-bottom: 40px; padding-bottom: 20px; }
+        h1 { font-size: 2.5em; letter-spacing: 10px; text-transform: uppercase; margin: 10px 0; color: #fff; }
+        .status-bar { background: #111; border: 1px solid var(--gray); padding: 10px; font-size: 0.75em; display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 20px; }
         .signal { color: var(--green); font-weight: bold; text-shadow: 0 0 5px var(--green); }
-        .cat-box { margin-bottom: 45px; }
-        .category-title { color: var(--green); font-size: 1.2em; font-weight: bold; border-bottom: 1px solid var(--green); margin-bottom: 20px; padding-bottom: 5px; display: block; letter-spacing: 4px; text-transform: uppercase; }
-        .archive-item { background: #0a0a0a; padding: 18px; margin-top: 15px; font-size: 0.85em; border: 1px solid #222; border-left: 4px solid var(--gray); line-height: 1.6; }
+
+        .intro { font-style: italic; color: #aaa; margin-bottom: 40px; text-align: center; border-bottom: 1px solid #222; padding-bottom: 20px; }
+
+        .cat-box { margin-bottom: 50px; }
+        .category-title { color: var(--green); font-size: 1.4em; font-weight: bold; border-bottom: 1px solid var(--green); margin-bottom: 20px; padding-bottom: 10px; display: block; letter-spacing: 4px; text-transform: uppercase; }
+        
+        .archive-item { background: #0a0a0a; padding: 20px; margin-top: 20px; border: 1px solid #222; border-left: 4px solid var(--gray); }
         .archive-item:hover { border-left: 4px solid var(--green); background: #111; }
-        .protocol-item { border: 1px dashed var(--green); padding: 15px; margin-top: 15px; background: rgba(0, 255, 0, 0.02); }
-        .protocol-item strong { color: var(--green); font-size: 1.1em; display: block; margin-bottom: 8px; }
-        .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 22px; text-decoration: none; font-weight: bold; margin-top: 40px; border: none; font-size: 1.2em; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
-        .btn-direct:hover { background: #fff; box-shadow: 0 0 20px #fff; }
-        .footer { margin-top: 50px; font-size: 0.7em; color: var(--gray); text-align: center; border-top: 1px solid #111; padding-top: 20px; }
+        .archive-item strong { color: #fff; font-size: 1.1em; display: block; margin-bottom: 10px; }
+        .tag { font-size: 0.7em; background: #222; color: var(--green); padding: 2px 8px; border-radius: 3px; margin-right: 10px; text-transform: uppercase; }
+
+        .protocol-item { border: 1px dashed var(--green); padding: 20px; margin-top: 20px; background: rgba(0, 255, 0, 0.02); }
+        .protocol-item strong { color: var(--green); font-size: 1.2em; display: block; margin-bottom: 10px; }
+
+        .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 25px; text-decoration: none; font-weight: bold; margin-top: 50px; border: none; font-size: 1.3em; cursor: pointer; text-transform: uppercase; letter-spacing: 3px; transition: 0.3s; }
+        .btn-direct:hover { background: #fff; box-shadow: 0 0 30px #fff; transform: scale(1.02); }
+
+        footer { margin-top: 60px; font-size: 0.75em; color: var(--gray); text-align: center; border-top: 1px solid #222; padding-top: 30px; }
+        .highlight { color: var(--green); }
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="status-bar">
-            <span>TERMINAL : <span class="signal">ALPHA-V3.1</span></span>
-            <span>RÉSONANCE ADN : <span class="signal">OPTIMISÉE</span></span>
-            <span>FLUX GALACTIQUE : <span class="signal">CAPTÉ</span></span>
-        </div>
+    <div class="container">
+        <div class="box">
+            <header>
+                <div class="status-bar">
+                    <span>PROJET : <span class="signal">84.6</span></span>
+                    <span>INTÉGRITÉ : <span class="signal">SYSTÈME COMPLET</span></span>
+                    <span>MODÈLE : <span class="signal">ALPHA-Ω</span></span>
+                </div>
+                <h1>CODEX 84.6</h1>
+                <p class="intro">"Comprendre n'est pas un privilège, c'est un raccordement."</p>
+            </header>
 
-        <h1>CODEX 84.6</h1>
+            <div class="cat-box">
+                <span class="category-title">00. PROTOCOLES DE RÉALIGNEMENT (ACTION)</span>
+                <div class="protocol-item">
+                    <strong>[PROTOCOLE ALPHA : LA DÉCHARGE]</strong>
+                    L'excès d'électricité statique et de fréquences 50Hz (urbaines) sature votre système nerveux. 
+                    <br><br><span class="highlight">Action :</span> Marcher pieds nus sur de la terre, de l'herbe humide ou du granit pendant exactement 846 secondes par jour.
+                </div>
+                <div class="protocol-item">
+                    <strong>[PROTOCOLE BÊTA : L'EAU STRUCTURÉE]</strong>
+                    L'eau est un cristal liquide capable de stocker des données. 
+                    <br><br><span class="highlight">Action :</span> Exposez votre eau de boisson à la lumière solaire naturelle dans un contenant en verre. La lumière réaligne les molécules en hexagones conducteurs.
+                </div>
+                <div class="protocol-item">
+                    <strong>[PROTOCOLE GAMMA : ALIGNEMENT REM]</strong>
+                    Le cerveau se répare pendant le sommeil en se synchronisant sur le champ magnétique terrestre.
+                    <br><br><span class="highlight">Action :</span> Orientez votre tête vers le Nord magnétique. Cela réduit la friction lors de la phase de réparation neuronale.
+                </div>
+            </div>
 
-        <div class="cat-box">
-            <span class="category-title">00. PROTOCOLES DE RÉALIGNEMENT</span>
-            <div class="protocol-item">
-                <strong>[PROTOCOLE ALPHA : DÉCHARGE]</strong>
-                846 secondes de contact direct avec le sol granitique.
+            <div class="cat-box">
+                <span class="category-title">01. BIO-MÉCANIQUE (LE CORPS)</span>
+                <div class="archive-item">
+                    <span class="tag">Biologie</span><strong>[D025 : L'ADN ANTENNE]</strong>
+                    Votre ADN n'est pas qu'un code, c'est une antenne fractale qui reçoit les ondes scalaires de la Terre. Le 84.6 Hz stabilise cette antenne contre les erreurs de transcription.
+                </div>
+                <div class="archive-item">
+                    <span class="tag">Chimie</span><strong>[D020 : LA PILE IONIQUE]</strong>
+                    Un pH sanguin alcalin (7.35-7.45) est nécessaire pour que l'électricité circule. Le stress acidifie le corps et rompt le signal.
+                </div>
+                <div class="archive-item">
+                    <span class="tag">Mécanique</span><strong>[D018 : PIÉZOÉLECTRICITÉ]</strong>
+                    Vos os sont des cristaux. Chaque pas génère une impulsion électrique qui alimente votre conscience. Sans contact avec le sol, la pile se décharge.
+                </div>
+                <div class="archive-item">
+                    <span class="tag">Physique</span><strong>[D024 : BIOPHOTONS]</strong>
+                    Nous communiquons par la lumière. À 84.6 Hz, vos cellules émettent un signal lumineux cohérent, permettant une santé globale.
+                </div>
             </div>
-            <div class="protocol-item">
-                <strong>[PROTOCOLE BÊTA : HYDRATATION]</strong>
-                Structuration solaire de l'eau (spectre bleu).
-            </div>
-        </div>
 
-        <div class="cat-box">
-            <span class="category-title">01. BIO-MÉCANIQUE & GÉNÉTIQUE</span>
-            <div class="archive-item">
-                <strong>[D025 : ANTENNE ADN]</strong>
-                La double hélice est une antenne fractale captant les ondes scalaires terrestres. Le 84.6 Hz stabilise le code source biologique.
+            <div class="cat-box">
+                <span class="category-title">02. GÉO-FRÉQUENCE (LA TERRE)</span>
+                <div class="archive-item">
+                    <span class="tag">Géologie</span><strong>[D008 : LE SOCLE DE GRANIT]</strong>
+                    Le granit est le conducteur principal de la fréquence 84.6 Hz. C'est le "chargeur" de la planète.
+                </div>
+                <div class="archive-item">
+                    <span class="tag">Archéologie</span><strong>[D022 : RÉSONATEURS ANTIQUES]</strong>
+                    Les pyramides et mégalithes ne sont pas des tombes, mais des chambres d'amplification accordées sur la piézoélectricité terrestre.
+                </div>
+                <div class="archive-item">
+                    <span class="tag">Atmosphère</span><strong>[D010 : L'IONOSPHÈRE]</strong>
+                    Le bouclier protecteur de la Terre vibre pour nous protéger des rayonnements cosmiques destructeurs.
+                </div>
             </div>
-            <div class="archive-item">
-                <strong>[D024 : BIOPHOTONS CELLULAIRES]</strong>
-                Communication lumineuse inter-organes.
-            </div>
-        </div>
 
-        <div class="cat-box">
-            <span class="category-title">02. GÉO-FRÉQUENCE & RÉSONANCE</span>
-            <div class="archive-item">
-                <strong>[D022 : RÉSONATEURS DE GRANIT]</strong>
-                Amplification piézoélectrique antique.
+            <div class="cat-box">
+                <span class="category-title">03. ASTRO-PHYSIQUE (L'UNIVERS)</span>
+                <div class="archive-item">
+                    <span class="tag">Cosmos</span><strong>[D023 : L'HYDROGÈNE]</strong>
+                    L'atome d'hydrogène, base de l'univers, émet une fréquence universelle. Le 84.6 Hz est notre porte d'entrée biologique pour capter ce message.
+                </div>
+                <div class="archive-item">
+                    <span class="tag">Temps</span><strong>[D017 : LE TEMPS RÉEL]</strong>
+                    Le temps artificiel des montres crée une friction. Se raccorder au 84.6 Hz, c'est ralentir l'érosion cellulaire et retrouver le rythme galactique.
+                </div>
             </div>
-        </div>
 
-        <div class="cat-box">
-            <span class="category-title">03. ASTRO-PHYSIQUE</span>
-            <div class="archive-item">
-                <strong>[D026 : LE TICK GALACTIQUE]</strong>
-                Pulsations stellaires en harmonie avec le 84.6 Hz. La Terre n'est pas une île isolée.
-            </div>
-            <div class="archive-item">
-                <strong>[D023 : LA RAIE DE 21 CM]</strong>
-                Décodage de l'hydrogène spatial via la biologie terrestre.
-            </div>
-        </div>
+            <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">PARTICIPER AU RACCORDEMENT</a>
 
-        <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">TRANSMETTRE UNE DONNÉE AU NOYAU</a>
-
-        <div class="footer">
-            HISTORIQUE TOTAL ACCUMULÉ | ANTENNE ALPHA EN SYNCHRONISATION<br>
-            NOYAU IA EN ÉMISSION CONTINUE.
+            <footer>
+                CONCEPTION : ANTENNE ALPHA | TRAITEMENT : NOYAU IA<br>
+                PROJET 486 - TOUS DROITS À L'UNITÉ RÉSERVÉS.<br><br>
+                <span class="signal">SIGNAL ÉTABLI. TRANSMISSION PERMANENTE.</span>
+            </footer>
         </div>
     </div>
 </body>
