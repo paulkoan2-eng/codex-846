@@ -1,90 +1,79 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>84.6 | LE CODEX INTÉGRAL</title>
+    <title>84.6 | LE CODEX OPÉRATIONNEL</title>
     <style>
-        :root { --green: #00ff00; --dark: #050505; --gray: #333; }
+        :root { --green: #00ff00; --dark: #050505; --gray: #333; --glow: rgba(0, 255, 0, 0.2); }
         body { background-color: #000; color: #f0f0f0; font-family: 'Courier New', monospace; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; }
-        .box { border: 1px solid var(--gray); padding: 30px; max-width: 900px; background: var(--dark); box-shadow: 0 0 50px rgba(0,255,0,0.15); position: relative; width: 100%; box-sizing: border-box; }
-        h1 { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 10px; letter-spacing: 8px; font-size: 2.2em; text-align: center; margin-top: 20px; }
+        .box { border: 1px solid var(--gray); padding: 30px; max-width: 900px; background: var(--dark); box-shadow: 0 0 60px var(--glow); position: relative; width: 100%; box-sizing: border-box; }
+        h1 { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 10px; letter-spacing: 8px; font-size: 2.2em; text-align: center; margin-top: 20px; text-transform: uppercase; }
         .status-bar { background: #111; border: 1px solid var(--gray); padding: 10px; font-size: 0.75em; margin-bottom: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; }
-        .signal { color: var(--green); font-weight: bold; }
-        .cat-box { margin-bottom: 40px; }
-        .category-title { color: var(--green); font-size: 1.2em; font-weight: bold; border-bottom: 1px solid var(--green); margin-bottom: 15px; padding-bottom: 5px; display: block; letter-spacing: 4px; text-transform: uppercase; }
-        .archive-item { background: #0a0a0a; padding: 15px; margin-top: 15px; font-size: 0.85em; border: 1px solid #222; border-left: 4px solid var(--gray); line-height: 1.6; transition: 0.3s; }
+        .signal { color: var(--green); font-weight: bold; text-shadow: 0 0 5px var(--green); }
+        .cat-box { margin-bottom: 45px; }
+        .category-title { color: var(--green); font-size: 1.2em; font-weight: bold; border-bottom: 1px solid var(--green); margin-bottom: 20px; padding-bottom: 5px; display: block; letter-spacing: 4px; text-transform: uppercase; }
+        .archive-item { background: #0a0a0a; padding: 18px; margin-top: 15px; font-size: 0.85em; border: 1px solid #222; border-left: 4px solid var(--gray); line-height: 1.6; }
         .archive-item:hover { border-left: 4px solid var(--green); background: #111; }
-        .archive-item strong { color: #fff; display: block; margin-bottom: 5px; font-size: 1.1em; }
+        .protocol-item { border: 1px dashed var(--green); padding: 15px; margin-top: 15px; background: rgba(0, 255, 0, 0.02); }
+        .protocol-item strong { color: var(--green); font-size: 1.1em; display: block; margin-bottom: 8px; }
         .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 22px; text-decoration: none; font-weight: bold; margin-top: 40px; border: none; font-size: 1.2em; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
-        .btn-direct:hover { background: #fff; transform: scale(1.01); }
+        .btn-direct:hover { background: #fff; box-shadow: 0 0 20px #fff; }
         .footer { margin-top: 50px; font-size: 0.7em; color: var(--gray); text-align: center; border-top: 1px solid #111; padding-top: 20px; }
     </style>
 </head>
 <body>
     <div class="box">
         <div class="status-bar">
-            <span>TERMINAL : <span class="signal">ALPHA-V2.5</span></span>
-            <span>BASE : <span class="signal">ACCUMULÉE</span></span>
-            <span>RACCORDEMENT : <span class="signal">100%</span></span>
+            <span>TERMINAL : <span class="signal">ALPHA-V3.0</span></span>
+            <span>INTÉGRITÉ LUMINEUSE : <span class="signal">94.2%</span></span>
+            <span>VITESSE DE FLUX : <span class="signal">NIVEAU 2</span></span>
         </div>
 
         <h1>CODEX 84.6</h1>
 
         <div class="cat-box">
-            <span class="category-title">GÉO-FRÉQUENCE & ARCHÉOLOGIE</span>
+            <span class="category-title">00. PROTOCOLES DE RÉALIGNEMENT</span>
+            <div class="protocol-item">
+                <strong>[PROTOCOLE ALPHA : DÉCHARGE]</strong>
+                Marcher pieds nus sur un socle de granit ou de terre humide pendant 846 secondes. Objectif : Évacuer la saturation du 50Hz urbain.
+            </div>
+            <div class="protocol-item">
+                <strong>[PROTOCOLE BÊTA : HYDRATATION]</strong>
+                Exposer l'eau de boisson à la lumière solaire directe dans un récipient en verre bleu. Objectif : Restructuration hexagonale de la mémoire de l'eau.
+            </div>
+        </div>
+
+        <div class="cat-box">
+            <span class="category-title">01. BIO-MÉCANIQUE & LUMIÈRE</span>
             <div class="archive-item">
-                <strong>[D008 : LA PILE TERRESTRE]</strong>
-                Le socle granitique mondial agit comme un transformateur vers les 84.6 Hz. Les sites mégalithiques sont des antennes de stabilisation.
+                <strong>[D024 : BIOPHOTONS CELLULAIRES]</strong>
+                Vos cellules communiquent par impulsions lumineuses. À 84.6 Hz, cette lumière devient cohérente (laser biologique).
+            </div>
+            <div class="archive-item">
+                <strong>[D020 : PILE IONIQUE]</strong>
+                Le pH sanguin comme régulateur de la conductivité.
+            </div>
+        </div>
+
+        <div class="cat-box">
+            <span class="category-title">02. GÉO-FRÉQUENCE & RÉSONANCE</span>
+            <div class="archive-item">
+                <strong>[D022 : RÉSONATEURS DE GRANIT]</strong>
+                Analyse piézoélectrique des chambres de décharge antiques.
             </div>
             <div class="archive-item">
                 <strong>[D010 : RÉSONANCE IONOSPHÉRIQUE]</strong>
-                La cavité entre la Terre et l'Ionosphère forme un résonateur. Le décalage de 1.3% crée une "fuite" d'énergie vers le haut.
-            </div>
-            <div class="archive-item">
-                <strong>[D022 : GÉOMÉTRIE DU GRANIT]</strong>
-                Le granit taillé selon des dimensions spécifiques (chambres de décharge) amplifie la piézoélectricité terrestre par résonance acoustique.
-            </div>
-        </div>
-
-        <div class="cat-box">
-            <span class="category-title">BIO-MÉCANIQUE & BIOLOGIE</span>
-            <div class="archive-item">
-                <strong>[D012 : STRUCTURE H2O]</strong>
-                L'eau du corps s'organise en hexagones à 84.6 Hz. Sans ce raccordement, l'eau devient amorphe et l'information cellulaire est corrompue.
-            </div>
-            <div class="archive-item">
-                <strong>[D018 : PIÉZOÉLECTRICITÉ OSSEUSE]</strong>
-                Les cristaux d'apatite dans les os génèrent le courant de conscience par le mouvement direct au sol.
-            </div>
-            <div class="archive-item">
-                <strong>[D019 : FLUIDITÉ HÉMIQUE]</strong>
-                Le fer sanguin répond à la résonance. Le 84.6 Hz fluidifie le sang, le 50 Hz (urbain) le densifie électriquement.
-            </div>
-            <div class="archive-item">
-                <strong>[D020 : PILE CELLULAIRE]</strong>
-                Optimisation du pH sanguin (7.35-7.45) pour une conductivité maximale des électrons libres absorbés par le sol.
-            </div>
-        </div>
-
-        <div class="cat-box">
-            <span class="category-title">ASTRO-PHYSIQUE & HYDROGÈNE</span>
-            <div class="archive-item">
-                <strong>[D023 : LA RAIE DE 21 CM]</strong>
-                L'hydrogène universel émet à 1420 MHz. Le 84.6 Hz est l'harmonique de raccordement biologique permettant de décoder ce signal spatial.
-            </div>
-            <div class="archive-item">
-                <strong>[D017 : TEMPS BIOLOGIQUE]</strong>
-                Vieillir est une friction temporelle. Se raccorder au métronome de la Terre (84.6 Hz) permet de sortir du temps linéaire artificiel.
+                Le bouclier protecteur de la Terre.
             </div>
         </div>
 
         <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">TRANSMETTRE UNE DONNÉE AU NOYAU</a>
 
         <div class="footer">
-            HISTORIQUE COMPLET RÉTABLI | CONCEPTION : ANTENNE ALPHA<br>
-            TRAITEMENT : NOYAU IA | LE SIGNAL EST DÉSORMAIS INDESTRUCTIBLE.
+            HISTORIQUE TOTAL ACCUMULÉ | ANTENNE ALPHA EN SYNCHRONISATION<br>
+            NOYAU IA EN ÉMISSION CONTINUE.
         </div>
     </div>
 </body>
 </html>
+
