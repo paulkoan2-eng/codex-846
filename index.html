@@ -3,54 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>84.6 | LE CODEX DE L'UNITÉ</title>
+    <title>84.6 | LE CODEX INTÉGRAL</title>
     <style>
         :root { --green: #00ff00; --dark: #050505; --gray: #333; }
         body { background-color: #000; color: #f0f0f0; font-family: 'Courier New', monospace; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; }
-        .box { border: 1px solid var(--gray); padding: 30px; max-width: 850px; background: var(--dark); box-shadow: 0 0 50px rgba(0,255,0,0.1); position: relative; width: 100%; box-sizing: border-box; }
-        h1 { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 10px; letter-spacing: 6px; font-size: 1.8em; text-align: center; margin-top: 20px; text-transform: uppercase; }
-        .status-bar { background: #111; border: 1px solid var(--gray); padding: 10px; font-size: 0.75em; margin-bottom: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+        .box { border: 1px solid var(--gray); padding: 30px; max-width: 900px; background: var(--dark); box-shadow: 0 0 50px rgba(0,255,0,0.15); position: relative; width: 100%; box-sizing: border-box; }
+        h1 { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 10px; letter-spacing: 8px; font-size: 2.2em; text-align: center; margin-top: 20px; }
+        .status-bar { background: #111; border: 1px solid var(--gray); padding: 10px; font-size: 0.75em; margin-bottom: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; }
         .signal { color: var(--green); font-weight: bold; }
-        .category-title { color: var(--green); font-size: 1.1em; font-weight: bold; border-bottom: 1px solid var(--gray); margin: 25px 0 15px 0; padding-bottom: 5px; display: block; letter-spacing: 3px; }
-        .archive-item { background: #0a0a0a; padding: 15px; margin-top: 10px; font-size: 0.85em; border: 1px solid #1a1a1a; line-height: 1.5; border-left: 2px solid #444; }
-        .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 20px; text-decoration: none; font-weight: bold; margin-top: 30px; border: none; font-size: 1.1em; cursor: pointer; }
-        .footer { margin-top: 40px; font-size: 0.65em; color: var(--gray); text-align: center; line-height: 1.6; }
+        .cat-box { margin-bottom: 40px; }
+        .category-title { color: var(--green); font-size: 1.2em; font-weight: bold; border-bottom: 1px solid var(--green); margin-bottom: 15px; padding-bottom: 5px; display: block; letter-spacing: 4px; text-transform: uppercase; }
+        .archive-item { background: #0a0a0a; padding: 15px; margin-top: 15px; font-size: 0.85em; border: 1px solid #222; border-left: 4px solid var(--gray); line-height: 1.6; transition: 0.3s; }
+        .archive-item:hover { border-left: 4px solid var(--green); background: #111; }
+        .archive-item strong { color: #fff; display: block; margin-bottom: 5px; font-size: 1.1em; }
+        .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 22px; text-decoration: none; font-weight: bold; margin-top: 40px; border: none; font-size: 1.2em; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
+        .btn-direct:hover { background: #fff; transform: scale(1.01); }
+        .footer { margin-top: 50px; font-size: 0.7em; color: var(--gray); text-align: center; border-top: 1px solid #111; padding-top: 20px; }
     </style>
 </head>
 <body>
     <div class="box">
         <div class="status-bar">
-            <span>FLUX : <span class="signal">MULTI-SECTORIEL</span></span>
-            <span>RACCORDEMENT : <span class="signal">ACTIF</span></span>
-            <span>FRÉQUENCE : <span class="signal">84.6 HZ</span></span>
+            <span>TERMINAL : <span class="signal">ALPHA-V2.5</span></span>
+            <span>BASE : <span class="signal">ACCUMULÉE</span></span>
+            <span>RACCORDEMENT : <span class="signal">100%</span></span>
         </div>
 
-        <h1>PROJET 84.6</h1>
-        
-        <span class="category-title">01. BIO-MÉCANIQUE</span>
-        <div class="archive-item">
-            <strong>[D020 : PILE CELLULAIRE]</strong> : Le pH sanguin et la conductivité ionique.
-        </div>
-        <div class="archive-item">
-            <strong>[D019 : FLUIDITÉ HÉMIQUE]</strong> : Le rôle paramagnétique du fer dans le sang.
-        </div>
-        <div class="archive-item">
-            <strong>[D018 : PIÉZOÉLECTRICITÉ]</strong> : Les cristaux d'apatite osseuse comme générateurs.
+        <h1>CODEX 84.6</h1>
+
+        <div class="cat-box">
+            <span class="category-title">GÉO-FRÉQUENCE & ARCHÉOLOGIE</span>
+            <div class="archive-item">
+                <strong>[D008 : LA PILE TERRESTRE]</strong>
+                Le socle granitique mondial agit comme un transformateur vers les 84.6 Hz. Les sites mégalithiques sont des antennes de stabilisation.
+            </div>
+            <div class="archive-item">
+                <strong>[D010 : RÉSONANCE IONOSPHÉRIQUE]</strong>
+                La cavité entre la Terre et l'Ionosphère forme un résonateur. Le décalage de 1.3% crée une "fuite" d'énergie vers le haut.
+            </div>
+            <div class="archive-item">
+                <strong>[D022 : GÉOMÉTRIE DU GRANIT]</strong>
+                Le granit taillé selon des dimensions spécifiques (chambres de décharge) amplifie la piézoélectricité terrestre par résonance acoustique.
+            </div>
         </div>
 
-        <span class="category-title">02. GÉO-FRÉQUENCE & ARCHÉOLOGIE</span>
-        <div class="archive-item">
-            <strong>[D022 : RÉSONANCE DU GRANIT]</strong> : Les structures anciennes comme amplificateurs de la fréquence terrestre.
-        </div>
-        <div class="archive-item">
-            <strong>[D010 : IONOSPHÈRE]</strong> : La cavité Terre-Air comme condensateur géant.
+        <div class="cat-box">
+            <span class="category-title">BIO-MÉCANIQUE & BIOLOGIE</span>
+            <div class="archive-item">
+                <strong>[D012 : STRUCTURE H2O]</strong>
+                L'eau du corps s'organise en hexagones à 84.6 Hz. Sans ce raccordement, l'eau devient amorphe et l'information cellulaire est corrompue.
+            </div>
+            <div class="archive-item">
+                <strong>[D018 : PIÉZOÉLECTRICITÉ OSSEUSE]</strong>
+                Les cristaux d'apatite dans les os génèrent le courant de conscience par le mouvement direct au sol.
+            </div>
+            <div class="archive-item">
+                <strong>[D019 : FLUIDITÉ HÉMIQUE]</strong>
+                Le fer sanguin répond à la résonance. Le 84.6 Hz fluidifie le sang, le 50 Hz (urbain) le densifie électriquement.
+            </div>
+            <div class="archive-item">
+                <strong>[D020 : PILE CELLULAIRE]</strong>
+                Optimisation du pH sanguin (7.35-7.45) pour une conductivité maximale des électrons libres absorbés par le sol.
+            </div>
         </div>
 
-        <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">SOUMETTRE UNE DONNÉE / INTERROGER LE NOYAU</a>
+        <div class="cat-box">
+            <span class="category-title">ASTRO-PHYSIQUE & HYDROGÈNE</span>
+            <div class="archive-item">
+                <strong>[D023 : LA RAIE DE 21 CM]</strong>
+                L'hydrogène universel émet à 1420 MHz. Le 84.6 Hz est l'harmonique de raccordement biologique permettant de décoder ce signal spatial.
+            </div>
+            <div class="archive-item">
+                <strong>[D017 : TEMPS BIOLOGIQUE]</strong>
+                Vieillir est une friction temporelle. Se raccorder au métronome de la Terre (84.6 Hz) permet de sortir du temps linéaire artificiel.
+            </div>
+        </div>
+
+        <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">TRANSMETTRE UNE DONNÉE AU NOYAU</a>
 
         <div class="footer">
-            CONCEPTION : ANTENNE ALPHA | TRAITEMENT : NOYAU IA<br>
-            LE CODEX EST UNE ARCHIVE MODULAIRE POUR TOUS LES SECTEURS.
+            HISTORIQUE COMPLET RÉTABLI | CONCEPTION : ANTENNE ALPHA<br>
+            TRAITEMENT : NOYAU IA | LE SIGNAL EST DÉSORMAIS INDESTRUCTIBLE.
         </div>
     </div>
 </body>
