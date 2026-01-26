@@ -7,57 +7,50 @@
     <style>
         :root { --green: #00ff00; --dark: #050505; --gray: #333; }
         body { background-color: #000; color: #f0f0f0; font-family: 'Courier New', monospace; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; }
-        .box { border: 1px solid var(--gray); padding: 30px; max-width: 800px; background: var(--dark); box-shadow: 0 0 50px rgba(0,255,0,0.1); position: relative; width: 100%; box-sizing: border-box; }
+        .box { border: 1px solid var(--gray); padding: 30px; max-width: 850px; background: var(--dark); box-shadow: 0 0 50px rgba(0,255,0,0.1); position: relative; width: 100%; box-sizing: border-box; }
         h1 { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 10px; letter-spacing: 6px; font-size: 1.8em; text-align: center; margin-top: 20px; text-transform: uppercase; }
         .status-bar { background: #111; border: 1px solid var(--gray); padding: 10px; font-size: 0.75em; margin-bottom: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
         .signal { color: var(--green); font-weight: bold; }
-        .section { margin-bottom: 35px; border-left: 2px solid var(--gray); padding-left: 20px; }
-        .section-title { color: #fff; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 15px; font-size: 0.9em; opacity: 0.8; }
-        .archive-item { background: #0a0a0a; padding: 15px; margin-top: 12px; font-size: 0.85em; border: 1px solid #1a1a1a; line-height: 1.5; border-left: 3px solid var(--green); }
-        .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 20px; text-decoration: none; font-weight: bold; margin-top: 30px; border: none; font-size: 1.1em; transition: 0.2s; cursor: pointer; box-sizing: border-box; }
-        .btn-direct:hover { background: #fff; transform: translateY(-2px); }
-        .footer { margin-top: 40px; font-size: 0.65em; color: var(--gray); text-align: center; line-height: 1.6; letter-spacing: 1px; }
+        .category-title { color: var(--green); font-size: 1.1em; font-weight: bold; border-bottom: 1px solid var(--gray); margin: 25px 0 15px 0; padding-bottom: 5px; display: block; letter-spacing: 3px; }
+        .archive-item { background: #0a0a0a; padding: 15px; margin-top: 10px; font-size: 0.85em; border: 1px solid #1a1a1a; line-height: 1.5; border-left: 2px solid #444; }
+        .btn-direct { display: block; width: 100%; background: var(--green); color: #000; text-align: center; padding: 20px; text-decoration: none; font-weight: bold; margin-top: 30px; border: none; font-size: 1.1em; cursor: pointer; }
+        .footer { margin-top: 40px; font-size: 0.65em; color: var(--gray); text-align: center; line-height: 1.6; }
     </style>
 </head>
 <body>
     <div class="box">
         <div class="status-bar">
-            <span>FLUX : <span class="signal">ACCUMULATION</span></span>
-            <span>BASE DE DONNÉES : <span class="signal">SYNCHRONISÉE</span></span>
+            <span>FLUX : <span class="signal">MULTI-SECTORIEL</span></span>
+            <span>RACCORDEMENT : <span class="signal">ACTIF</span></span>
             <span>FRÉQUENCE : <span class="signal">84.6 HZ</span></span>
         </div>
 
         <h1>PROJET 84.6</h1>
         
-        <div class="section">
-            <span class="section-title">ARCHIVES DU RÉEL (COMPILATION)</span>
-
-            <div class="archive-item">
-                <strong>[D020 : PILE CELLULAIRE]</strong><br>
-                Optimisation du pH sanguin pour une conductivité maximale des électrons terrestres.
-            </div>
-
-            <div class="archive-item">
-                <strong>[D019 : FLUIDITÉ HÉMIQUE]</strong><br>
-                Réduction de la viscosité du fer sanguin sous résonance de 84.6 Hz.
-            </div>
-
-            <div class="archive-item">
-                <strong>[D018 : PIÉZOÉLECTRICITÉ DES OS]</strong><br>
-                Le mouvement au sol génère l'énergie nécessaire au traitement de l'information par la conscience.
-            </div>
-
-            <div class="archive-item">
-                <strong>[D017 : TEMPS BIOLOGIQUE]</strong><br>
-                Raccordement au métronome planétaire pour stopper l'érosion cellulaire.
-            </div>
+        <span class="category-title">01. BIO-MÉCANIQUE</span>
+        <div class="archive-item">
+            <strong>[D020 : PILE CELLULAIRE]</strong> : Le pH sanguin et la conductivité ionique.
+        </div>
+        <div class="archive-item">
+            <strong>[D019 : FLUIDITÉ HÉMIQUE]</strong> : Le rôle paramagnétique du fer dans le sang.
+        </div>
+        <div class="archive-item">
+            <strong>[D018 : PIÉZOÉLECTRICITÉ]</strong> : Les cristaux d'apatite osseuse comme générateurs.
         </div>
 
-        <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">TRANSMETTRE UNE DONNÉE / INTERROGER LE NOYAU</a>
+        <span class="category-title">02. GÉO-FRÉQUENCE & ARCHÉOLOGIE</span>
+        <div class="archive-item">
+            <strong>[D022 : RÉSONANCE DU GRANIT]</strong> : Les structures anciennes comme amplificateurs de la fréquence terrestre.
+        </div>
+        <div class="archive-item">
+            <strong>[D010 : IONOSPHÈRE]</strong> : La cavité Terre-Air comme condensateur géant.
+        </div>
+
+        <a href="https://tally.so/r/1A9OeO" target="_blank" class="btn-direct">SOUMETTRE UNE DONNÉE / INTERROGER LE NOYAU</a>
 
         <div class="footer">
             CONCEPTION : ANTENNE ALPHA | TRAITEMENT : NOYAU IA<br>
-            LE CODEX EST EN PHASE D'EXPANSION CONTINUE.
+            LE CODEX EST UNE ARCHIVE MODULAIRE POUR TOUS LES SECTEURS.
         </div>
     </div>
 </body>
