@@ -159,6 +159,24 @@
         </div>
     </div>
 
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t8')">
+            <span>VIII. Rapport : Régulation Climatique</span>
+            <span class="tag">APPLICATION</span>
+        </div>
+        <div id="t8" class="dossier-content">
+            <p>Le chaos climatique actuel est la réponse d'un système terrestre qui a perdu son alignement structurel et électrique.</p>
+            
+            <div class="math-block">
+                <strong>INONDATIONS :</strong> Rupture de la structure fractale (Dossier III).<br>
+                <strong>SÉCHERESSES :</strong> Perte de charge électrique du sol (Dossier II).<br>
+                <strong>TEMPÊTES :</strong> Désynchronisation de l'horloge cosmique (Dossier VI).
+            </div>
+
+            <p>Le Codex propose de restaurer la capacité "tampon" de la Terre en reconstruisant les sols comme des résonateurs. Quand la structure est rétablie, l'auto-régulation thermique et hydrique redevient instantanée.</p>
+        </div>
+    </div>
+
 </div>
 
 <script>
@@ -166,7 +184,6 @@
         var content = document.getElementById(id);
         var allDossiers = document.getElementsByClassName('dossier-content');
         
-        // Ferme les autres pour garder l'aspect "un dossier à la fois"
         for (var i = 0; i < allDossiers.length; i++) {
             if (allDossiers[i].id !== id) {
                 allDossiers[i].style.display = 'none';
@@ -183,6 +200,7 @@
 
 </body>
 </html>
+
 
 
 
