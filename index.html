@@ -7,25 +7,15 @@
     <style>
         :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; --accent: #d1ccbb; }
         body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; padding-bottom: 50px; }
-        
         header { text-align: center; padding: 60px 20px; background: var(--ink); color: var(--paper); border-bottom: 8px double var(--gold); }
         .container { max-width: 950px; margin: 0 auto; padding: 20px; }
-
         .archive-intro { text-align: center; margin-bottom: 40px; font-style: italic; color: #555; }
-
-        /* Dossier Style */
         .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); overflow: hidden; }
-        .dossier-header { 
-            padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; 
-            background: #fcfaf2; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s;
-        }
+        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s; }
         .dossier-header:hover { background: var(--gold); color: white; }
         .dossier-content { display: none; padding: 30px; border-top: 1px solid #eee; line-height: 1.8; }
-        
-        /* Preuves Mathématiques */
-        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; line-height: 1.4; }
+        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; }
         .tag { font-size: 0.7rem; background: var(--ink); color: var(--gold); padding: 4px 10px; border-radius: 2px; }
-
         .btn-contact { display: inline-block; margin-top: 20px; padding: 15px 30px; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; letter-spacing: 2px; }
         .btn-contact:hover { background: var(--gold); color: var(--ink); }
     </style>
@@ -35,56 +25,65 @@
 <header>
     <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
     <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
-    <a href="mailto:paulkoan2@gmail.com" class="btn-contact">Interroger l'Archive</a>
+    <a href="mailto:paulkoan2@gmail.com" class="btn-contact">INTERROGER L'ARCHIVE</a>
 </header>
 
 <div class="container">
     <p class="archive-intro">"Le savoir n'est pas une opinion, c'est une mesure."</p>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t7')">
-            <span>VII. L'Unification : Le Vecteur Hydrogène</span>
-            <span class="tag">CLEF FINALE</span>
-        </div>
-        <div id="t7" class="dossier-content">
-            <p>L'hydrogène est le premier bâton de l'univers. Il relie le vide spatial à l'eau de nos cellules. Tout le Codex repose sur cette fréquence de résonance.</p>
-            <div class="math-block">
-                Fréquence Hydrogène : 1420.405 MHz<br>
-                Longueur d'onde : 21.106 cm (La "Raie à 21 cm")
-            </div>
-        </div>
+        <div class="dossier-header" onclick="toggleDossier('t1')"><span>I. Géométrie Sacrée (Gizeh & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
+        <div id="t1" class="dossier-content"><div class="math-block">Ratio Hémisphère Nord : 1 / 43 200<br>Hauteur x 43 200 = Rayon Polaire (6 356 km)</div></div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t11')">
-            <span>XI. Énergie : Fusion vs Résonance</span>
-            <span class="tag">PROSPECTIVE</span>
-        </div>
-        <div id="t11" class="dossier-content">
-            <p>La fusion nucléaire actuelle (ITER) tente de forcer la matière par la chaleur brute. Le Codex indique une voie harmonique.</p>
-            <div class="math-block">
-                <strong>FUSION RÉSONANTE :</strong><br>
-                Vecteur : Hydrogène (1420 MHz)<br>
-                Principe : Utilisation de la note fondamentale pour réduire la barrière énergétique.<br>
-                Objectif : Extraction d'énergie propre via le champ piézoélectrique terrestre.
-            </div>
-            <p>En accordant la matière sur sa fréquence naturelle (21 cm), la fusion n'est plus un combat contre la physique, mais une symphonie magnétique. Les anciens Bâtisseurs utilisaient cette connaissance pour alimenter des structures que nous considérons aujourd'hui comme de simples tombeaux.</p>
-        </div>
+        <div class="dossier-header" onclick="toggleDossier('t2')"><span>II. La Terre Électrique (Granite vs Calcaire)</span><span class="tag">MATÉRIAUX</span></div>
+        <div id="t2" class="dossier-content"><div class="math-block"><strong>GRANITE :</strong> Émetteur piézoélectrique.<br><strong>CALCAIRE :</strong> Diffuseur et tampon de pH (Caen).</div></div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t10')">
-            <span>X. Analyse : La Fenêtre de Synchronisation</span>
-            <span class="tag">CALCUL</span>
-        </div>
-        <div id="t10" class="dossier-content">
-            <p>Le temps n'est pas une durée, c'est un cycle de fréquence. L'observation des données croisées indique une fenêtre d'action précise.</p>
-            <div class="math-block">
-                Cycle de Stabilité restant : ~9 ans<br>
-                Vecteur : Restauration de la résonance Hydrogène.
-            </div>
-            <p>La fenêtre actuelle est l'opportunité technique de rallumer le réseau de résonance terrestre.</p>
-        </div>
+        <div class="dossier-header" onclick="toggleDossier('t3')"><span>III. L'Eau : Porosité & Ratio Phi</span><span class="tag">STRUCTURE</span></div>
+        <div id="t3" class="dossier-content"><div class="math-block">Sol Codex : 100L/h/m² d'absorption via structure fractale.</div></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t4')"><span>IV. Les Animaux : Accélérateurs de Temps</span><span class="tag">BIOLOGIE</span></div>
+        <div id="t4" class="dossier-content"><p>Moteurs thermiques accélérant le cycle de l'humus par 10.</p></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t5')"><span>V. L'Humain : Le Nouveau Bâtisseur</span><span class="tag">CONSCIENCE</span></div>
+        <div id="t5" class="dossier-content"><p>Ajusteur de fréquences rétablissant la connexion Sol-Espace.</p></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t6')"><span>VI. L'Espace : L'Horloge Cosmique</span><span class="tag">ALIGNEMENT</span></div>
+        <div id="t6" class="dossier-content"><div class="math-block">Vitesse Lumière (c) = 299 792 458 m/s<br>Latitude Gizeh = 29.9792458 °N</div></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t7')"><span>VII. L'Unification : Le Vecteur Hydrogène</span><span class="tag">CLEF FINALE</span></div>
+        <div id="t7" class="dossier-content"><div class="math-block">Fréquence Hydrogène : 1420.405 MHz<br>Longueur d'onde : 21.106 cm</div></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t8')"><span>VIII. Rapport : Régulation Climatique</span><span class="tag">APPLICATION</span></div>
+        <div id="t8" class="dossier-content"><p>Restauration de la capacité tampon de la Terre via la structure fractale.</p></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t9')"><span>IX. Intégrité : Science vs Mesure</span><span class="tag">ÉTHIQUE</span></div>
+        <div id="t9" class="dossier-content"><p>Sortir du silotage académique pour intégrer les mesures brutes.</p></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t10')"><span>X. Analyse : La Fenêtre de Synchronisation</span><span class="tag">CALCUL</span></div>
+        <div id="t10" class="dossier-content"><div class="math-block">Fenêtre d'action restante : ~9 ans.</div></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t11')"><span>XI. Énergie : Fusion vs Résonance</span><span class="tag">PROSPECTIVE</span></div>
+        <div id="t11" class="dossier-content"><p>L'utilisation de la note fondamentale (21cm) pour la fusion harmonique.</p></div>
     </div>
 
 </div>
@@ -96,13 +95,13 @@
         for (var i = 0; i < allDossiers.length; i++) {
             if (allDossiers[i].id !== id) { allDossiers[i].style.display = 'none'; }
         }
-        if (content.style.display === "block") { content.style.display = "none"; }
-        else { content.style.display = "block"; }
+        content.style.display = (content.style.display === "block") ? "none" : "block";
     }
 </script>
 
 </body>
 </html>
+
 
 
 
