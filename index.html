@@ -3,101 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODEX - Archives de la Vérité</title>
+    <title>CODEX - Système d'Information Universel</title>
     <style>
-        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; }
-        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; }
-        header { text-align: center; padding: 80px 20px; background: var(--ink); color: var(--paper); border-bottom: 5px double var(--gold); }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; --accent: #d1ccbb; }
+        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; padding-bottom: 50px; }
         
-        /* Style des Dossiers Interactifs */
-        .dossier {
-            background: #fff;
-            border: 1px solid #d1ccbb;
-            margin-bottom: 20px;
-            box-shadow: 4px 4px 0px #d1ccbb;
-            transition: all 0.3s ease;
-        }
-        .dossier-header {
-            padding: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fcfaf2;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid #eee;
+        header { text-align: center; padding: 60px 20px; background: var(--ink); color: var(--paper); border-bottom: 8px double var(--gold); }
+        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
+
+        .archive-intro { text-align: center; margin-bottom: 40px; font-style: italic; color: #555; }
+
+        /* Dossier Style */
+        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); overflow: hidden; }
+        .dossier-header { 
+            padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; 
+            background: #fcfaf2; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s;
         }
         .dossier-header:hover { background: var(--gold); color: white; }
-        .dossier-content {
-            display: none; /* Caché par défaut */
-            padding: 30px;
-            border-top: 1px dashed var(--gold);
-        }
-        .math-block {
-            background: #1a261b; color: var(--gold);
-            padding: 20px; font-family: 'Courier New', monospace;
-            margin: 20px 0; border-left: 5px solid var(--gold);
-        }
-        .tag { font-size: 0.7rem; background: var(--gold); color: white; padding: 3px 8px; border-radius: 3px; }
+        .dossier-content { display: none; padding: 30px; border-top: 1px solid #eee; line-height: 1.8; }
+        
+        /* Preuves Mathématiques */
+        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; line-height: 1.4; }
+        .tag { font-size: 0.7rem; background: var(--ink); color: var(--gold); padding: 4px 10px; border-radius: 2px; }
+
+        .btn-contact { display: inline-block; margin-top: 20px; padding: 15px 30px; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; letter-spacing: 2px; }
+        .btn-contact:hover { background: var(--gold); color: var(--ink); }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>CODEX : LE SAVOIR RÉEL</h1>
-    <p><i>Cliquez sur un dossier pour extraire la donnée.</i></p>
-    <div style="margin-top:30px;">
-        <a href="mailto:paulkoan2@gmail.com" style="color:var(--gold); text-decoration:none; border:1px solid var(--gold); padding:10px 20px;">CONTACTER L'ARCHIVISTE</a>
-    </div>
+    <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
+    <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
+    <a href="mailto:paulkoan2@gmail.com" class="btn-contact">Interroger l'Archive</a>
 </header>
 
 <div class="container">
+    <p class="archive-intro">"Le savoir n'est pas une opinion, c'est une mesure."</p>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d1')">
-            <span>I. Géométrie : Le Code 432</span>
-            <span class="tag">TOP SECRET</span>
+        <div class="dossier-header" onclick="toggleDossier('t1')">
+            <span>I. Géométrie Sacrée (Gizeh & 432)</span>
+            <span class="tag">DÉCRYPTÉ</span>
         </div>
-        <div id="d1" class="dossier-content">
-            <p>La Grande Pyramide est une maquette mathématique de l'Hémisphère Nord à l'échelle 1:43 200.</p>
+        <div id="t1" class="dossier-content">
+            <p>La Grande Pyramide est une maquette mathématique de l'Hémisphère Nord. Les bâtisseurs connaissaient les dimensions exactes de la planète sans outils modernes.</p>
             <div class="math-block">
-                Hauteur (146.6m) x 43 200 = Rayon Polaire Terre<br>
-                Périmètre (921.4m) x 43 200 = Circonférence Équatoriale
+                Ratio Hémisphère Nord : 1 / 43 200<br>
+                Hauteur x 43 200 = Rayon Polaire (6 356 km)<br>
+                Périmètre x 43 200 = Circonférence Équateur (40 075 km)
             </div>
-            <p>Ce chiffre n'est pas un hasard, c'est une fréquence harmonique universelle utilisée pour lier la pierre au cosmos.</p>
+            <p>Ce calcul lie la pierre au mouvement de la Terre dans l'espace.</p>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d2')">
-            <span>II. Terre : La Pile Électrique</span>
+        <div class="dossier-header" onclick="toggleDossier('t2')">
+            <span>II. La Terre Électrique (Quartz & Mégalithes)</span>
             <span class="tag">PHYSIQUE</span>
         </div>
-        <div id="d2" class="dossier-content">
-            <p>Le sol est un conducteur. Les mégalithes (quartz/silice) agissent comme des transducteurs piézoélectriques.</p>
+        <div id="t2" class="dossier-content">
+            <p>Le sol est une pile. Les mégalithes (quartz/silice) agissent comme des condensateurs piézoélectriques sur les courants telluriques.</p>
             <div class="math-block">
-                Pression Gravitaire + Quartz = Charge Électrique (V)<br>
-                Résultat : Accélération de la division cellulaire végétale.
+                Matériau : Granite (Riche en Silice)<br>
+                Effet : Piézoélectricité sous pression gravitaire<br>
+                Fonction : Ionisation du sol pour la vitalité cellulaire végétale.
             </div>
-            <p>On ne cultivait pas la terre, on l'activait électriquement.</p>
+            <p>On ne cultivait pas la terre, on l'activait électriquement pour nourrir le vivant.</p>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d3')">
-            <span>III. Eau : Le Ratio d'Absorption</span>
+        <div class="dossier-header" onclick="toggleDossier('t3')">
+            <span>III. L'Eau : Porosité & Ratio Phi</span>
+            <span class="tag">STRUCTURE</span>
+        </div>
+        <div id="t3" class="dossier-content">
+            <p>L'eau suit la structure du vide. Le nombre d'or (Phi) gère la distribution fractale des racines et de l'air dans le sol.</p>
+            <div class="math-block">
+                Sol Compacté : 10L/h/m² (Saturation & Inondation)<br>
+                Sol Codex : 100L/h/m² (Absorption & Stockage)
+            </div>
+            <p>La géométrie du sol est l'unique rempart contre les cycles de sécheresse.</p>
+        </div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t4')">
+            <span>IV. Les Animaux : Accélérateurs de Temps</span>
             <span class="tag">BIOLOGIE</span>
         </div>
-        <div id="d3" class="dossier-content">
-            <p>Un sol structuré selon le nombre d'or (Phi) possède une porosité fractale capable de gérer des flux massifs.</p>
+        <div id="t4" class="dossier-content">
+            <p>L'animal est le moteur thermique. Sans lui, le cycle de la matière est lent. Avec lui, la terre "digère" et se reconstruit instantanément.</p>
             <div class="math-block">
-                Sol Moderne : 10L / m² / heure (Saturation)<br>
-                Sol Codex : 100L / m² / heure (Absorption)
+                Transformation : Matière Brute -> Humus stable<br>
+                Vitesse : Cycle accéléré par 10 (Rapport Azote/Carbone).
             </div>
-            <p>L'inondation n'est pas une fatalité météo, c'est une erreur de structure géométrique du sol.</p>
+            <p>Ils sont les artisans de la structure profonde du sol.</p>
+        </div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t5')">
+            <span>V. L'Humain : Le Regard Régulateur</span>
+            <span class="tag">CONSCIENCE</span>
+        </div>
+        <div id="t5" class="dossier-content">
+            <p>L'Humain n'est pas un exploitant, c'est un ajusteur de fréquences. Son rôle est de maintenir l'équilibre entre les forces du sol et du ciel.</p>
+            <div class="math-block">
+                Efficacité = Observation / Temps d'Action<br>
+                Résultat : Création d'oasis par simple alignement sur les lois naturelles.
+            </div>
+            <p>Le savoir réel permet de produire l'abondance sans effort de destruction.</p>
+        </div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t6')">
+            <span>VI. L'Espace : L'Horloge Cosmique</span>
+            <span class="tag">ALIGNEMENT</span>
+        </div>
+        <div id="t6" class="dossier-content">
+            <p>La Terre est branchée sur des fréquences stellaires. L'alignement des monuments anciens servait à synchroniser la biologie terrestre sur le temps galactique.</p>
+            <div class="math-block">
+                Vitesse de la Lumière : 299 792 458 m/s<br>
+                Latitude Gizeh : 29.9792458 °N<br>
+                Résonance : La Terre calcule en temps réel.
+            </div>
+            <p>L'espace dicte le rythme. Ignorer le ciel, c'est essayer de cultiver dans le noir.</p>
         </div>
     </div>
 
@@ -106,6 +139,15 @@
 <script>
     function toggleDossier(id) {
         var content = document.getElementById(id);
+        var allDossiers = document.getElementsByClassName('dossier-content');
+        
+        // Ferme les autres pour garder l'aspect "un dossier à la fois"
+        for (var i = 0; i < allDossiers.length; i++) {
+            if (allDossiers[i].id !== id) {
+                allDossiers[i].style.display = 'none';
+            }
+        }
+
         if (content.style.display === "block") {
             content.style.display = "none";
         } else {
@@ -116,6 +158,7 @@
 
 </body>
 </html>
+
 
 
 
