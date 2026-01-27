@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Symbiose - Le Savoir Réel</title>
+    <title>Le Codex - La Vérité Oubliée</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-color: #f4f7f4;
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c2924;
+            background-color: #f4f1ea; /* Teinte parchemin */
             margin: 0;
             padding: 0;
         }
@@ -20,55 +20,98 @@
         }
         header {
             text-align: center;
-            padding: 100px 20px;
-            background: #274029;
-            color: white;
-            border-bottom: 10px solid #8ba888;
+            padding: 120px 20px;
+            background: #1a261b;
+            color: #d1ccbb;
+            border-bottom: 5px double #8ba888;
         }
         .manifeste {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-style: italic;
-            font-weight: 300;
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
+            line-height: 1.4;
         }
-        .btn-action { margin-top: 40px; }
+        .btn-action { margin-top: 50px; }
         .btn-action a {
-            background-color: #8ba888; color: #274029; 
-            padding: 15px 35px; text-decoration: none; font-weight: bold; 
-            border-radius: 5px; display: inline-block; text-transform: uppercase;
+            background-color: #8ba888; 
+            color: #1a261b; 
+            padding: 18px 40px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border: 1px solid #1a261b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .grid-section {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-            margin: 60px 0;
+            grid-template-columns: 1.8fr 1.2fr;
+            gap: 40px;
+            margin: 80px 0;
             align-items: start;
         }
         section {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: #fff;
+            padding: 40px;
+            border: 1px solid #d1ccbb;
+            box-shadow: 5px 5px 0px #d1ccbb;
         }
         .sidebar-evidence {
-            background: #eef2ee;
-            padding: 20px;
-            border-left: 4px solid #8ba888;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: #4a634d;
+            background: #fcfaf2;
+            padding: 25px;
+            border: 1px solid #8ba888;
+            font-size: 0.95rem;
+            position: relative;
         }
-        h2 { color: #274029; border-bottom: 2px solid #8ba888; padding-bottom: 10px; text-transform: uppercase; }
-        .math-box { font-family: "Courier New", monospace; font-weight: bold; color: #274029; margin-top: 10px; display: block; }
+        .sidebar-evidence::before {
+            content: "ARCHIVE TECHNIQUE";
+            display: block;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #8ba888;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        h2 { 
+            font-family: 'Times New Roman', serif;
+            color: #1a261b; 
+            border-bottom: 1px solid #8ba888; 
+            padding-bottom: 15px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+        }
+        .math-box { 
+            display: block;
+            margin: 15px 0;
+            padding: 10px;
+            background: #fff;
+            border: 1px dashed #8ba888;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            text-align: center;
+        }
+        .diagram-placeholder {
+            width: 100%;
+            height: 120px;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #999;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="manifeste">
-            "Nous respirons par la Terre, mais c'est par nos mains qu'elle respire encore. Nous vivons par les animaux, mais c'est par notre regard qu'ils existent demain. Tout est là, sous nos yeux. Il ne s'agit plus d'apprendre, mais de se souvenir de notre place. On vous explique comment."
-            <div class="btn-action"><a href="mailto:paulkoan2@gmail.com">si vous avez des questions</a></div>
+            "Nous respirons par la Terre, mais c'est par nos mains qu'elle respire encore. Nous vivons par les animaux, mais c'est par notre regard qu'ils existent demain. Tout est là, sous nos yeux. Il ne s'agit plus d'apprendre, mais de se souvenir de notre place."
+            <div class="btn-action">
+                <a href="mailto:paulkoan2@gmail.com">Accéder au Savoir</a>
+            </div>
         </div>
     </header>
 
@@ -76,35 +119,40 @@
         
         <div class="grid-section">
             <section>
-                <h2>I. La Terre : La Source et le But</h2>
-                <p>La Terre n'est pas un décor, c'est l'organisme premier. Comprendre ses cycles, respecter son sol et lui redonner sa capacité à respirer est la première étape de toute survie.</p>
+                <h2>I. La Terre : Fondations & Géométrie</h2>
+                <p>La Terre n'est pas un stock de ressources, c'est une architecture. Les Anciens le savaient. De la pyramide de Gizeh aux structures agraires oubliées, tout répondait à une géométrie précise visant à stabiliser la matière et l'énergie.</p>
+                <p>Respecter le sol, c'est respecter les lois de la physique qui permettent à la vie de s'ancrer sans effort.</p>
             </section>
             <div class="sidebar-evidence">
-                <strong>Preuve Réelle #1 : La Pyramide Invisible</strong>
-                <p>Pour 1 hectare de sol vivant, la masse des micro-organismes sous terre est égale à celle de 20 vaches en surface.</p>
-                <span class="math-box">Ratio : 10 tonnes (Sous-sol) / 1 tonne (Surface)</span>
+                <strong>La Preuve des Bâtisseurs</strong>
+                <div class="diagram-placeholder">[Schéma : Le Rapport Phi & La Pyramide]</div>
+                <p>La pyramide n'est pas une tombe, c'est un calcul de densité. Elle imite la structure de stabilité d'un sol vivant non compacté.</p>
+                <span class="math-box">Φ = 1,618 (Nombre d'Or)</span>
+                <p>C'est la règle de croissance universelle, du cristal de roche à la fougère.</p>
             </div>
         </div>
 
         <div class="grid-section">
             <section>
-                <h2>II. Les Animaux : Les Sentinelles</h2>
-                <p>Ils sont le lien direct entre la Terre et nous. Leur présence et leur santé sont les témoins absolus de la viabilité de notre environnement.</p>
+                <h2>II. Les Sentinelles : Le Flux</h2>
+                <p>L'animal est le moteur qui accélère le temps de la Terre. Sans lui, le cycle de la matière est lent. Avec lui, la transformation devient immédiate. Ils sont les gardiens du mouvement perpétuel.</p>
             </section>
             <div class="sidebar-evidence">
-                <strong>Preuve Réelle #2 : Le Cycle de l'Azote</strong>
-                <p>L'animal transforme le végétal en engrais bio-disponible instantanément, accélérant la régénération du sol de 300% par rapport à une décomposition lente.</p>
+                <strong>La Preuve du Mouvement</strong>
+                <p>La symbiose animal/sol génère un surplus d'énergie thermique et chimique indispensable à la création de l'humus.</p>
+                <span class="math-box">Azote (N) + Carbone (C) = Vie</span>
             </div>
         </div>
 
         <div class="grid-section">
             <section>
-                <h2>III. L'Humain : Le Gardien</h2>
-                <p>Notre rôle est celui de la protection. Par notre conscience et notre travail, nous bouclons la boucle de la vie. C'est ici que l'autonomie prend son sens.</p>
+                <h2>III. Le Regard : La Conscience</h2>
+                <p>L'Humain n'est pas un exploitant, c'est un régulateur. Son rôle est de comprendre ces calculs anciens pour les réappliquer sur le terrain. Le savoir réel ne s'invente pas, il se retrouve.</p>
             </section>
             <div class="sidebar-evidence">
-                <strong>Preuve Réelle #3 : Loi de l'Autonomie</strong>
-                <p>L'intelligence du regard humain permet de produire sur 500m² ce que l'industrie produit sur 5000m² par la simple compréhension des symbioses.</p>
+                <strong>La Preuve par l'Espace</strong>
+                <p>Un seul homme conscient de ces lois peut régénérer une terre dix fois plus vite qu'une machine aveugle.</p>
+                <span class="math-box">Efficacité = Observation / Temps</span>
             </div>
         </div>
 
