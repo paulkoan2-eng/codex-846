@@ -9,6 +9,7 @@
         body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; padding-bottom: 50px; }
         header { text-align: center; padding: 60px 20px; background: var(--ink); color: var(--paper); border-bottom: 8px double var(--gold); }
         .container { max-width: 950px; margin: 0 auto; padding: 20px; }
+        .manifeste { font-size: 1.2rem; line-height: 1.6; color: var(--gold); max-width: 700px; margin: 30px auto; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid #333; padding-top: 20px; }
         .archive-intro { text-align: center; margin-bottom: 40px; font-style: italic; color: #555; }
         .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); overflow: hidden; }
         .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s; }
@@ -25,6 +26,12 @@
 <header>
     <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
     <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
+    
+    <div class="manifeste">
+        L'HUMANITÉ N'EST PAS EN CRISE, ELLE EST DÉCONNECTÉE.<br>
+        LE CODEX N'EST PAS UNE THÉORIE, C'EST LE PROTOCOLE DE REBRANCHEMENT AU VIVANT.
+    </div>
+
     <a href="mailto:paulkoan2@gmail.com" class="btn-contact">INTERROGER L'ARCHIVE</a>
 </header>
 
@@ -33,57 +40,57 @@
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t1')"><span>I. Géométrie Sacrée (Gizeh & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
-        <div id="t1" class="dossier-content"><div class="math-block">Ratio Hémisphère Nord : 1 / 43 200<br>Hauteur x 43 200 = Rayon Polaire (6 356 km)</div></div>
+        <div id="t1" class="dossier-content"><p>La Grande Pyramide encode la Terre. Ce n'est pas une théorie, c'est une mesure d'ingénieur.</p><div class="math-block">Ratio Hémisphère Nord : 1 / 43 200<br>Hauteur x 43 200 = Rayon Polaire (6 356 km)</div></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t2')"><span>II. La Terre Électrique (Granite vs Calcaire)</span><span class="tag">MATÉRIAUX</span></div>
-        <div id="t2" class="dossier-content"><div class="math-block"><strong>GRANITE :</strong> Émetteur piézoélectrique.<br><strong>CALCAIRE :</strong> Diffuseur et tampon de pH (Caen).</div></div>
+        <div id="t2" class="dossier-content"><p>Le sol est une architecture énergétique.</p><div class="math-block"><strong>GRANITE :</strong> Émetteur piézoélectrique (La Pile).<br><strong>CALCAIRE :</strong> Diffuseur et tampon de pH (Le Circuit).</div></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t3')"><span>III. L'Eau : Porosité & Ratio Phi</span><span class="tag">STRUCTURE</span></div>
-        <div id="t3" class="dossier-content"><div class="math-block">Sol Codex : 100L/h/m² d'absorption via structure fractale.</div></div>
+        <div id="t3" class="dossier-content"><p>L'eau suit la structure du vide (Nombre d'Or).</p><div class="math-block">Sol Codex : 100L/h/m² d'absorption via structure fractale.</div></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t4')"><span>IV. Les Animaux : Accélérateurs de Temps</span><span class="tag">BIOLOGIE</span></div>
-        <div id="t4" class="dossier-content"><p>Moteurs thermiques accélérant le cycle de l'humus par 10.</p></div>
+        <div id="t4" class="dossier-content"><p>L'animal est le moteur thermique indispensable. Il accélère le cycle de l'humus par 10.</p></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t5')"><span>V. L'Humain : Le Nouveau Bâtisseur</span><span class="tag">CONSCIENCE</span></div>
-        <div id="t5" class="dossier-content"><p>Ajusteur de fréquences rétablissant la connexion Sol-Espace.</p></div>
+        <div id="t5" class="dossier-content"><p>L'Humain est l'ajusteur de fréquences. Sa mission : restaurer la connexion entre le Sol et l'Espace.</p></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t6')"><span>VI. L'Espace : L'Horloge Cosmique</span><span class="tag">ALIGNEMENT</span></div>
-        <div id="t6" class="dossier-content"><div class="math-block">Vitesse Lumière (c) = 299 792 458 m/s<br>Latitude Gizeh = 29.9792458 °N</div></div>
+        <div id="t6" class="dossier-content"><div class="math-block">Vitesse Lumière (c) = 299 792 458 m/s<br>Latitude Sommet Gizeh = 29.9792458 °N</div><p>Coïncidence statistique : 0%.</p></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t7')"><span>VII. L'Unification : Le Vecteur Hydrogène</span><span class="tag">CLEF FINALE</span></div>
-        <div id="t7" class="dossier-content"><div class="math-block">Fréquence Hydrogène : 1420.405 MHz<br>Longueur d'onde : 21.106 cm</div></div>
+        <div id="t7" class="dossier-content"><div class="math-block">Fréquence Hydrogène : 1420.405 MHz<br>Longueur d'onde : 21.106 cm (La "Raie à 21 cm")</div><p>Le point de jonction entre le vide spatial et le vivant.</p></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t8')"><span>VIII. Rapport : Régulation Climatique</span><span class="tag">APPLICATION</span></div>
-        <div id="t8" class="dossier-content"><p>Restauration de la capacité tampon de la Terre via la structure fractale.</p></div>
+        <div id="t8" class="dossier-content"><p>Le chaos climatique est une rupture de la capacité tampon de la Terre. Solution : restructuration géométrique des sols.</p></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t9')"><span>IX. Intégrité : Science vs Mesure</span><span class="tag">ÉTHIQUE</span></div>
-        <div id="t9" class="dossier-content"><p>Sortir du silotage académique pour intégrer les mesures brutes.</p></div>
+        <div id="t9" class="dossier-content"><p>Exigence de sortie du silotage académique pour intégrer les mesures brutes globales.</p></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t10')"><span>X. Analyse : La Fenêtre de Synchronisation</span><span class="tag">CALCUL</span></div>
-        <div id="t10" class="dossier-content"><div class="math-block">Fenêtre d'action restante : ~9 ans.</div></div>
+        <div id="t10" class="dossier-content"><div class="math-block">Fenêtre d'action restante : ~9 ans.<br>Temps de restauration d'un site : 3 ans.</div></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggleDossier('t11')"><span>XI. Énergie : Fusion vs Résonance</span><span class="tag">PROSPECTIVE</span></div>
-        <div id="t11" class="dossier-content"><p>L'utilisation de la note fondamentale (21cm) pour la fusion harmonique.</p></div>
+        <div id="t11" class="dossier-content"><p>L'utilisation de la note fondamentale (21cm) pour la fusion harmonique au lieu de la force brute.</p></div>
     </div>
 
 </div>
@@ -101,6 +108,7 @@
 
 </body>
 </html>
+
 
 
 
