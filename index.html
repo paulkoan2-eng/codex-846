@@ -3,74 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Codex - La Vérité Oubliée</title>
+    <title>CODEX - Archives de la Vérité</title>
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.7; color: #2c2924; background-color: #f4f1ea; margin: 0; padding: 0; }
-        .container { max-width: 1150px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; padding: 100px 20px; background: #1a261b; color: #d1ccbb; border-bottom: 5px double #8ba888; }
-        .manifeste { font-size: 1.6rem; font-style: italic; max-width: 850px; margin: 0 auto; }
-        .btn-action { margin-top: 50px; }
-        .btn-action a { background-color: #8ba888; color: #1a261b; padding: 18px 40px; text-decoration: none; font-weight: bold; border: 1px solid #1a261b; text-transform: uppercase; letter-spacing: 2px; }
-        .grid-section { display: grid; grid-template-columns: 1.6fr 1.4fr; gap: 40px; margin: 60px 0; align-items: start; }
-        section { background: #fff; padding: 40px; border: 1px solid #d1ccbb; box-shadow: 6px 6px 0px #d1ccbb; }
-        .sidebar-evidence { background: #fcfaf2; padding: 25px; border: 1px solid #8ba888; font-size: 0.9rem; color: #4a5c4c; }
-        h2 { font-family: 'Times New Roman', serif; color: #1a261b; border-bottom: 1px solid #8ba888; padding-bottom: 15px; text-transform: uppercase; letter-spacing: 3px; }
-        .math-box { display: block; margin: 15px 0; padding: 15px; background: #fff; border: 1px solid #274029; font-family: "Courier New", monospace; font-weight: bold; font-size: 1rem; color: #1a261b; }
-        .historical-note { border-top: 2px solid #8ba888; margin-top: 40px; padding-top: 40px; text-align: center; font-style: italic; }
-        .synthesis-map { background: #1a261b; color: #d1ccbb; padding: 50px; margin-top: 60px; border-radius: 5px; text-align: center; }
+        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; }
+        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; }
+        header { text-align: center; padding: 80px 20px; background: var(--ink); color: var(--paper); border-bottom: 5px double var(--gold); }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Style des Dossiers Interactifs */
+        .dossier {
+            background: #fff;
+            border: 1px solid #d1ccbb;
+            margin-bottom: 20px;
+            box-shadow: 4px 4px 0px #d1ccbb;
+            transition: all 0.3s ease;
+        }
+        .dossier-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fcfaf2;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #eee;
+        }
+        .dossier-header:hover { background: var(--gold); color: white; }
+        .dossier-content {
+            display: none; /* Caché par défaut */
+            padding: 30px;
+            border-top: 1px dashed var(--gold);
+        }
+        .math-block {
+            background: #1a261b; color: var(--gold);
+            padding: 20px; font-family: 'Courier New', monospace;
+            margin: 20px 0; border-left: 5px solid var(--gold);
+        }
+        .tag { font-size: 0.7rem; background: var(--gold); color: white; padding: 3px 8px; border-radius: 3px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="manifeste">
-            "Nous respirons par la Terre, mais c'est par nos mains qu'elle respire encore. Nous vivons par les animaux, mais c'est par notre regard qu'ils existent demain. Tout est là, sous nos yeux."
-            <div class="btn-action"><a href="mailto:paulkoan2@gmail.com">Accéder au Savoir</a></div>
-        </div>
-    </header>
-
-    <div class="container">
-        
-        <div class="grid-section">
-            <section>
-                <h2>I. Géométrie & Constantes</h2>
-                <p>La Terre n'est pas une boule de roche perdue, c'est un mécanisme précis. La Grande Pyramide de Gizeh n'est pas un monument, c'est une maquette mathématique de l'hémisphère nord à l'échelle 1:43 200.</p>
-                <p>Les Anciens utilisaient la coudée royale pour encoder les constantes universelles (Pi et Phi) afin de stabiliser leurs structures sur les lignes de force terrestres.</p>
-            </section>
-            <div class="sidebar-evidence">
-                <strong>Calcul de la Rotation</strong>
-                <div class="math-box">
-                    Périmètre Gizeh x 43 200 = <br>
-                    Circonférence Polaire Terre <br>
-                    (Marge d'erreur < 0.1%)
-                </div>
-                <p>Vitesse de rotation codée : La différence entre les rayons équatoriaux et polaires est inscrite dans les dimensions du socle.</p>
-                <span class="math-box">Φ² x 5 / 6 = π</span>
-            </div>
-        </div>
-
-        <div class="grid-section">
-            <section>
-                <h2>II. Dolmens : Les Accumulateurs</h2>
-                <p>Les dolmens et menhirs ne sont pas des tombes. Placés sur des croisements de courants telluriques, ils agissent comme des condensateurs. La forte teneur en quartz des roches sélectionnées permet une piézoélectricité naturelle sous la pression du sol.</p>
-            </section>
-            <div class="sidebar-evidence">
-                <strong>Preuve Vibratoire</strong>
-                <p>Le quartz (SiO2) vibre à une fréquence précise. Ces pierres rééquilibraient la charge électrique du sol pour booster la croissance végétale environnante.</p>
-                <span class="math-box">F = 1 / (2π √LC)</span>
-            </div>
-        </div>
-
-        <div class="synthesis-map">
-            <h2>Synthèse : La Loi Unique</h2>
-            <p style="max-width: 800px; margin: 0 auto;">Tout ce qui existe, de la pyramide au brin d'herbe, suit la spirale de Fibonacci. C'est l'unique vérité : la Terre calcule pour optimiser la vie. L'Humain n'est là que pour maintenir le contact entre ces deux réalités.</p>
-            <div class="math-box" style="background: none; color: #8ba888; border-color: #8ba888; display: inline-block; padding: 20px 50px;">
-                Φ (1,618) : L'ADN de la Matière
-            </div>
-            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">"Le hasard n'existe pas, il n'y a que des lois que nous avons cessé de lire."</p>
-        </div>
-
+<header>
+    <h1>CODEX : LE SAVOIR RÉEL</h1>
+    <p><i>Cliquez sur un dossier pour extraire la donnée.</i></p>
+    <div style="margin-top:30px;">
+        <a href="mailto:paulkoan2@gmail.com" style="color:var(--gold); text-decoration:none; border:1px solid var(--gold); padding:10px 20px;">CONTACTER L'ARCHIVISTE</a>
     </div>
+</header>
+
+<div class="container">
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('d1')">
+            <span>I. Géométrie : Le Code 432</span>
+            <span class="tag">TOP SECRET</span>
+        </div>
+        <div id="d1" class="dossier-content">
+            <p>La Grande Pyramide est une maquette mathématique de l'Hémisphère Nord à l'échelle 1:43 200.</p>
+            <div class="math-block">
+                Hauteur (146.6m) x 43 200 = Rayon Polaire Terre<br>
+                Périmètre (921.4m) x 43 200 = Circonférence Équatoriale
+            </div>
+            <p>Ce chiffre n'est pas un hasard, c'est une fréquence harmonique universelle utilisée pour lier la pierre au cosmos.</p>
+        </div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('d2')">
+            <span>II. Terre : La Pile Électrique</span>
+            <span class="tag">PHYSIQUE</span>
+        </div>
+        <div id="d2" class="dossier-content">
+            <p>Le sol est un conducteur. Les mégalithes (quartz/silice) agissent comme des transducteurs piézoélectriques.</p>
+            <div class="math-block">
+                Pression Gravitaire + Quartz = Charge Électrique (V)<br>
+                Résultat : Accélération de la division cellulaire végétale.
+            </div>
+            <p>On ne cultivait pas la terre, on l'activait électriquement.</p>
+        </div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('d3')">
+            <span>III. Eau : Le Ratio d'Absorption</span>
+            <span class="tag">BIOLOGIE</span>
+        </div>
+        <div id="d3" class="dossier-content">
+            <p>Un sol structuré selon le nombre d'or (Phi) possède une porosité fractale capable de gérer des flux massifs.</p>
+            <div class="math-block">
+                Sol Moderne : 10L / m² / heure (Saturation)<br>
+                Sol Codex : 100L / m² / heure (Absorption)
+            </div>
+            <p>L'inondation n'est pas une fatalité météo, c'est une erreur de structure géométrique du sol.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleDossier(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
 
 </body>
 </html>
