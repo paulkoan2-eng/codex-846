@@ -1,8 +1,3 @@
-C'est un excellent choix. Ce design "vieux papier / archive" avec l'intro animée donne une immersion incroyable. J'ai repris ta structure exacte et j'ai intégré tous les chapitres (l'Eau, les Poumons/Rivières et la Surmobilité) à l'intérieur des dossiers dépliants.
-
-Voici le code complet prêt à l'emploi :
-HTML
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,116 +9,93 @@ HTML
         
         body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; overflow-x: hidden; }
 
-        /* Effet Star Wars / Intro */
+        /* Effet Intro / Espace */
         .intro-container {
-            height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1000');
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1000');
             background-size: cover;
             background-position: center;
             display: flex;
             justify-content: center;
-            perspective: 400px;
-            overflow: hidden;
+            align-items: center;
             border-bottom: 5px solid var(--gold);
         }
 
-        .star-wars-text {
-            color: #f2e8c9;
-            font-weight: bold;
+        .main-title {
+            color: white;
+            font-size: 2.5rem;
+            letter-spacing: 10px;
             text-align: center;
-            transform: rotateX(25deg);
-            animation: scroll 45s linear infinite;
-            font-size: 1.5rem;
-            line-height: 2;
-            width: 80%;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        @keyframes scroll {
-            0% { transform: rotateX(25deg) translateY(100%); }
-            100% { transform: rotateX(25deg) translateY(-250%); }
-        }
+        header { text-align: center; padding: 20px; background: var(--ink); color: var(--paper); font-size: 0.8rem; letter-spacing: 3px; }
 
-        header { text-align: center; padding: 40px 20px; background: var(--ink); color: var(--paper); }
-        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 950px; margin: 0 auto; padding: 40px 20px; }
         
         /* Styles des Dossiers */
-        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); }
-        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eee; }
+        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05); }
+        .dossier-header { padding: 15px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eee; font-size: 0.9rem; }
         .dossier-header:hover { background: #f0ede4; }
-        .dossier-content { display: none; padding: 30px; line-height: 1.8; }
+        .dossier-content { display: none; padding: 30px; line-height: 1.8; border-top: 1px solid #eee; }
         
-        .quote-box { border-left: 4px solid var(--gold); padding-left: 20px; font-style: italic; margin: 20px 0; color: #444; }
-        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); }
-        img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid #ddd; }
+        .quote-box { border-left: 4px solid var(--gold); padding-left: 20px; font-style: italic; margin: 20px 0; color: #444; font-size: 1.2rem; }
+        .math-block { background: #1a261b; color: var(--gold); padding: 25px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; }
+        img { width: 100%; max-width: 800px; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px; }
         
-        .footer-info { text-align: center; padding: 40px; font-size: 0.9rem; opacity: 0.7; }
+        .footer-info { text-align: center; padding: 40px; font-size: 0.8rem; letter-spacing: 1px; color: var(--ink); }
         a { color: var(--gold); font-weight: bold; text-decoration: none; }
+        strong { color: #000; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
-    <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
-</header>
+<header>ARCHIVES DU CODEX - TRANSMISSION OFFICIELLE</header>
 
 <div class="intro-container">
-    <div class="star-wars-text">
-        <p>IL Y A BIEN LONGTEMPS...</p>
-        <p>DANS UN MONDE DÉCONNECTÉ,</p>
-        <p>LES BÂTISSEURS ONT LAISSÉ DES TRACES.</p>
-        <p>LA GÉOMÉTRIE DU TOURNESOL,</p>
-        <p>LE RATIO PHI DE L'EAU,</p>
-        <p>L'AMNÉSIE DES RÉGIONS.</p>
-        <p>TOUT ÉTAIT SOUS NOS YEUX.</p>
-        <p>IL EST TEMPS DE SE RÉVEILLER.</p>
-        <p>LE CODEX EST VOTRE GUIDE.</p>
-        <p>REGARDEZ LES CALCULS.</p>
-        <p>Y'A PAS DE HASARD.</p>
-    </div>
+    <h1 class="main-title">Y'A PAS DE HASARD.</h1>
 </div>
 
 <div class="container">
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d1')"><span>I. La Règle d'Or</span></div>
-        <div id="d1" class="dossier-content" style="display: block;"> <div class="quote-box">
+        <div class="dossier-header" onclick="toggleDossier('d1')"><span>I. LA RÈGLE D'OR</span><span>+</span></div>
+        <div id="d1" class="dossier-content">
+            <div class="quote-box">
                 "Je ne contredis personne, je complète. Regardez les faits, les calculs. Il n'y a pas de hasard !"
             </div>
-            <p>Le Codex n'est pas une croyance, c'est une observation factuelle du système d'information universel.</p>
+            <p>La base de toute transmission : l'observation pure. Nous ne sommes pas dans la croyance, mais dans la reconnaissance d'un système préexistant.</p>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d2')"><span>II. L'Eau : Porosité & Ratio Phi</span></div>
+        <div class="dossier-header" onclick="toggleDossier('d2')"><span>II. L'EAU : POROSITÉ & RATIO PHI</span><span>+</span></div>
         <div id="d2" class="dossier-content">
-            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Géométrie Sacrée">
-            <p>Regardez cette spirale. C'est l'optimisation absolue de l'espace. Le sol doit suivre cette structure pour boire 100L/h.</p>
+            <p>L'optimisation des flux suit une constante universelle. La structure de l'eau dans le sol n'est pas aléatoire, elle répond à une géométrie de survie.</p>
             <div class="math-block">
-                Ratio Phi détecté dans les flux hydrographiques : 1.618... <br>
-                Capacité d'absorption optimale = Structure Fractale.
+                Ratio Phi détecté : 1.618... <br>
+                Capacité d'absorption optimale = 100L/h par structure fractale.
             </div>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d3')"><span>III. Dossier XII : Résonance Biologique</span></div>
+        <div class="dossier-header" onclick="toggleDossier('d3')"><span>III. DOSSIER XII : RÉSONANCE BIOLOGIQUE</span><span>+</span></div>
         <div id="d3" class="dossier-content">
-            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Comparaison Poumons Rivières">
-            <p>La ressemblance n'est pas flagrante ? Elle est mathématique. Nos poumons et les deltas des fleuves partagent le même algorithme de distribution de l'énergie et de l'oxygène.</p>
+            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Comparaison Poumons-Rivières">
+            <p><strong>Observation :</strong> La ressemblance entre l'arbre pulmonaire et les deltas fluviaux est mathématique.</p>
             <div class="math-block">
-                Arbre Bronchique = Réseau Hydrographique <br>
-                Fonction : Échange gazeux / Échange minéral. <br>
-                Hasard : 0%
+                Système respiratoire humain = Système d'irrigation terrestre. <br>
+                Code source identique. Échange de gaz / Échange de minéraux.
             </div>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d4')"><span>IV. Pathologie : La Surmobilité</span></div>
-        <div id="d4" class="dossier-content">
+        <div class="dossier-header" onclick="toggleDossier('d4')"><span>IV. PATHOLOGIE : LA SURMOBILITÉ</span><span>+</span></div>
+        <div id="d4" class="dossier-content" style="display: block;">
             <p><strong>ALERTE SYSTÉMIQUE :</strong> L'hyper-mobilité humaine est la pollution la plus grave du système.</p>
-            <p>En saturant les flux, nous avons supprimé la capacité de la Terre à réaliser une <strong>amnésie régionale</strong>.</p>
+            <p>En saturant les flux par un mouvement perpétuel et désordonné, nous avons supprimé la capacité de la Terre à réaliser une <strong>amnésie régionale</strong>.</p>
             <div class="math-block">
                 Impossibilité d'isolation = Impossibilité de cicatrisation.<br>
                 Le trauma devient global et permanent.
@@ -134,8 +106,8 @@ HTML
 </div>
 
 <div class="footer-info">
-    <p>TRANSMISSION EN COURS SUR <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a></p>
-    <p>© BÂTISSEURS DU CODEX - AUCUN HASARD DÉTECTÉ</p>
+    TRANSMISSION EN COURS SUR <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a><br>
+    © BÂTISSEURS DU CODEX - AUCUN HASARD DÉTECTÉ
 </div>
 
 <script>
@@ -151,7 +123,6 @@ HTML
 
 </body>
 </html>
-
 
 
 
