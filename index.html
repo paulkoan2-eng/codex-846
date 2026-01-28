@@ -3,123 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODEX - Système d'Information Universel</title>
+    <title>CODEX - DOSSIER XII</title>
     <style>
-        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; --accent: #d1ccbb; }
-        
-        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; overflow-x: hidden; }
-
-        /* Effet Intro / Espace */
-        .intro-container {
-            height: 50vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1000');
-            background-size: cover;
-            background-position: center;
+        body {
+            background-color: #050a12;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            border-bottom: 5px solid var(--gold);
         }
 
-        .main-title {
-            color: white;
-            font-size: 2.5rem;
-            letter-spacing: 10px;
+        .container {
+            max-width: 900px;
+            padding: 40px 20px;
             text-align: center;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        header { text-align: center; padding: 20px; background: var(--ink); color: var(--paper); font-size: 0.8rem; letter-spacing: 3px; }
+        .main-image {
+            width: 100%;
+            border: 1px solid #1a3a5a;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+            margin-bottom: 20px;
+        }
 
-        .container { max-width: 950px; margin: 0 auto; padding: 40px 20px; }
-        
-        /* Styles des Dossiers */
-        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05); }
-        .dossier-header { padding: 15px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eee; font-size: 0.9rem; }
-        .dossier-header:hover { background: #f0ede4; }
-        .dossier-content { display: none; padding: 30px; line-height: 1.8; border-top: 1px solid #eee; }
-        
-        .quote-box { border-left: 4px solid var(--gold); padding-left: 20px; font-style: italic; margin: 20px 0; color: #444; font-size: 1.2rem; }
-        .math-block { background: #1a261b; color: var(--gold); padding: 25px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; }
-        img { width: 100%; max-width: 800px; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px; }
-        
-        .footer-info { text-align: center; padding: 40px; font-size: 0.8rem; letter-spacing: 1px; color: var(--ink); }
-        a { color: var(--gold); font-weight: bold; text-decoration: none; }
-        strong { color: #000; }
+        .quote {
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #ffcc00;
+            margin: 40px 0;
+            line-height: 1.6;
+        }
+
+        .chapter-section {
+            text-align: left;
+            background: rgba(26, 58, 90, 0.1);
+            border-left: 3px solid #00d4ff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .chapter-title {
+            color: #00d4ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .math-block {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border: 1px dashed #1a3a5a;
+            color: #8ba888;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .link-section {
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #1a3a5a;
+            width: 100%;
+        }
+
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #4a4a4a;
+        }
+
+        strong { color: #ffffff; }
     </style>
 </head>
 <body>
 
-<header>ARCHIVES DU CODEX - TRANSMISSION OFFICIELLE</header>
+    <div class="container">
+        <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="CODEX DOSSIER XII" class="main-image">
 
-<div class="intro-container">
-    <h1 class="main-title">Y'A PAS DE HASARD.</h1>
-</div>
-
-<div class="container">
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d1')"><span>I. LA RÈGLE D'OR</span><span>+</span></div>
-        <div id="d1" class="dossier-content">
-            <div class="quote-box">
-                "Je ne contredis personne, je complète. Regardez les faits, les calculs. Il n'y a pas de hasard !"
-            </div>
-            <p>La base de toute transmission : l'observation pure. Nous ne sommes pas dans la croyance, mais dans la reconnaissance d'un système préexistant.</p>
+        <div class="quote">
+            "Je ne contredis personne, je complète. <br>
+            Regardez les faits, les calculs. Il n'y a pas de hasard !"
         </div>
-    </div>
 
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d2')"><span>II. L'EAU : POROSITÉ & RATIO PHI</span><span>+</span></div>
-        <div id="d2" class="dossier-content">
-            <p>L'optimisation des flux suit une constante universelle. La structure de l'eau dans le sol n'est pas aléatoire, elle répond à une géométrie de survie.</p>
-            <div class="math-block">
-                Ratio Phi détecté : 1.618... <br>
-                Capacité d'absorption optimale = 100L/h par structure fractale.
-            </div>
+        <div class="chapter-section">
+            <span class="chapter-title">I. L'EAU : POROSITÉ & RATIO PHI</span>
+            <p>L'optimisation des flux suit une constante universelle. Le sol doit suivre cette structure pour boire 100L/h.</p>
+            <div class="math-block">Ratio Phi : 1.618... / Structure Fractale d'Absorption.</div>
         </div>
-    </div>
 
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d3')"><span>III. DOSSIER XII : RÉSONANCE BIOLOGIQUE</span><span>+</span></div>
-        <div id="d3" class="dossier-content">
-            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Comparaison Poumons-Rivières">
-            <p><strong>Observation :</strong> La ressemblance entre l'arbre pulmonaire et les deltas fluviaux est mathématique.</p>
-            <div class="math-block">
-                Système respiratoire humain = Système d'irrigation terrestre. <br>
-                Code source identique. Échange de gaz / Échange de minéraux.
-            </div>
+        <div class="chapter-section">
+            <span class="chapter-title">II. DOSSIER XII : RÉSONANCE BIOLOGIQUE</span>
+            <p>La ressemblance entre l'arbre pulmonaire et les deltas fluviaux est mathématique. Code source identique entre l'Humain et la Terre.</p>
+            <div class="math-block">Échange gazeux (Poumons) = Échange minéral (Deltas). Hasard : 0%.</div>
         </div>
-    </div>
 
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('d4')"><span>IV. PATHOLOGIE : LA SURMOBILITÉ</span><span>+</span></div>
-        <div id="d4" class="dossier-content" style="display: block;">
-            <p><strong>ALERTE SYSTÉMIQUE :</strong> L'hyper-mobilité humaine est la pollution la plus grave du système.</p>
-            <p>En saturant les flux par un mouvement perpétuel et désordonné, nous avons supprimé la capacité de la Terre à réaliser une <strong>amnésie régionale</strong>.</p>
-            <div class="math-block">
-                Impossibilité d'isolation = Impossibilité de cicatrisation.<br>
-                Le trauma devient global et permanent.
-            </div>
+        <div class="chapter-section">
+            <span class="chapter-title">III. PATHOLOGIE : LA SURMOBILITÉ</span>
+            <p>
+                L'hyper-mobilité humaine sature les flux et engendre une impossibilité de réaliser une <strong>amnésie régionale</strong>.
+            </p>
+            <p>
+                L'organisme Terre ne peut plus s'isoler pour cicatriser. Le trauma est maintenu globalement.
+            </p>
         </div>
+
+        <div class="link-section">
+            <p>Accéder au Codex : <a href="https://paulkoan2-eng.github.io/codex-846/">paulkoan2-eng.github.io/codex-846/</a></p>
+            <p>Suivre la transmission : <a href="https://www.twitch.tv/superfixs" target="_blank">twitch.tv/superfixs</a></p>
+        </div>
+
+        <footer>
+            SÉCURISÉ // DOSSIER XII // AUCUN HASARD DÉTECTÉ
+        </footer>
     </div>
-
-</div>
-
-<div class="footer-info">
-    TRANSMISSION EN COURS SUR <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a><br>
-    © BÂTISSEURS DU CODEX - AUCUN HASARD DÉTECTÉ
-</div>
-
-<script>
-    function toggleDossier(id) {
-        var content = document.getElementById(id);
-        var allDossiers = document.getElementsByClassName('dossier-content');
-        for (var i = 0; i < allDossiers.length; i++) {
-            if (allDossiers[i].id !== id) { allDossiers[i].style.display = 'none'; }
-        }
-        content.style.display = (content.style.display === "block") ? "none" : "block";
-    }
-</script>
 
 </body>
 </html>
