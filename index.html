@@ -1,9 +1,3 @@
-Je vois l'erreur sur ta capture d'écran : l'image principale ne s'affiche pas (elle affiche juste le texte "Preuve Visuelle Codex"). C'est normal, c'est parce que le lien que j'avais mis était un lien temporaire.
-
-Voici le code corrigé et optimisé. Pour que l'image s'affiche enfin, j'ai utilisé un hébergeur d'image stable.
-Le Code HTML Correct (Copie tout ce bloc) :
-HTML
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,166 +6,83 @@ HTML
     <title>CODEX - DOSSIER XII</title>
     <style>
         body {
-            background-color: #02050a;
+            background-color: #050a12;
             color: #e0e0e0;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow-x: hidden;
-        }
-
-        header {
-            width: 100%;
-            padding: 30px 0;
-            text-align: center;
-            background: linear-gradient(to bottom, #001a33, #02050a);
-            border-bottom: 1px solid #00d4ff;
-        }
-
-        .logo {
-            font-size: 2rem;
-            letter-spacing: 8px;
-            color: #00d4ff;
-            text-shadow: 0 0 15px #00d4ff;
-            font-weight: bold;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             padding: 40px 20px;
             text-align: center;
         }
 
-        /* Cadre lumineux pour l'image */
-        .image-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 30px;
-            border: 2px solid #00d4ff;
-            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
-            line-height: 0;
-        }
-
         .main-image {
             width: 100%;
-            max-width: 900px;
-            height: auto;
+            border: 1px solid #1a3a5a;
+            margin-bottom: 20px;
         }
 
         .quote {
             font-style: italic;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #ffcc00;
-            margin: 40px 0;
-            line-height: 1.6;
-            text-shadow: 1px 1px 2px black;
+            margin: 30px 0;
         }
 
-        .dossier-section {
-            background: rgba(0, 212, 255, 0.05);
-            border: 1px solid #1a3a5a;
-            border-left: 5px solid #00d4ff;
-            padding: 30px;
+        .section {
             text-align: left;
+            border-left: 2px solid #00d4ff;
+            padding-left: 20px;
             margin-top: 40px;
-            border-radius: 0 15px 15px 0;
         }
 
-        h2 {
-            color: #00d4ff;
-            text-transform: uppercase;
-            margin-top: 0;
-            letter-spacing: 2px;
-        }
-
-        .status {
-            color: #ff3300;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: rgba(255, 51, 0, 0.1);
-            padding: 5px 10px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        .highlight {
-            color: #00d4ff;
-            font-weight: bold;
-        }
-
-        .twitch-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #6441a5;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .twitch-btn:hover {
-            background-color: #7d5bbe;
-            box-shadow: 0 0 20px #6441a5;
-        }
+        h2 { color: #00d4ff; font-size: 1.1rem; letter-spacing: 2px; }
+        
+        a { color: #00d4ff; text-decoration: none; border-bottom: 1px solid #00d4ff; }
 
         footer {
-            margin-top: 80px;
-            padding: 30px;
-            font-size: 0.9rem;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.7rem;
             color: #4a4a4a;
-            border-top: 1px solid #1a3a5a;
-            width: 100%;
-            text-align: center;
-            letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">CODEX : DOSSIER XII</div>
-    </header>
-
     <div class="container">
-        
-        <div class="image-wrapper">
-            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Preuve Visuelle Codex" class="main-image">
-        </div>
+        <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="CODEX DOSSIER XII" class="main-image">
 
         <div class="quote">
             "Je ne contredis personne, je complète. <br>
             Regardez les faits, les calculs. Il n'y a pas de hasard !"
         </div>
 
-        <div class="dossier-section">
-            <div class="status">ALERTE SYSTÉMIQUE : AGITATION CRITIQUE</div>
-            <h2>LA SURMOBILITÉ</h2>
+        <div class="section">
+            <h2>CHAPITRE : LA SURMOBILITÉ</h2>
             <p>
-                L'hyper-mobilité de l'être humain constitue aujourd'hui la pollution la plus invisible et la plus dévastatrice. 
-                En saturant tous les flux naturels, nous avons brisé un mécanisme vital de la Terre : 
-                <span class="highlight">L'AMNÉSIE RÉGIONALE</span>.
+                L'hyper-mobilité humaine est une agression cinétique. En saturant les flux, nous avons brisé l'<strong>AMNÉSIE RÉGIONALE</strong> de la Terre.
             </p>
             <p>
-                <strong>Diagnostic :</strong> L'organisme terrestre est devenu incapable d'isoler une zone pour la cicatriser. 
-                La connexion permanente force une infection globale. Le système ne peut plus "oublier" le trauma pour se régénérer.
+                L'organisme ne peut plus isoler une zone pour la cicatriser. Le trauma est permanent.
             </p>
         </div>
 
-        <div class="dossier-section" style="border-left-color: #6441a5; background: rgba(100, 65, 165, 0.05);">
-            <h2>TRANSMISSION EN DIRECT</h2>
-            <p>Le Codex se décrypte en temps réel. Venez poser vos questions.</p>
-            <a href="https://www.twitch.tv/superfixs" class="twitch-btn" target="_blank">REJOINDRE LE LIVE TWITCH</a>
+        <div class="section">
+            <h2>TRANSMISSION</h2>
+            <p>Direct Twitch : <a href="https://www.twitch.tv/superfixs" target="_blank">twitch.tv/superfixs</a></p>
+            <p>Lien officiel : <a href="https://paulkoan2-eng.github.io/codex-846/">paulkoan2-eng.github.io/codex-846/</a></p>
         </div>
 
+        <footer>
+            SÉCURISÉ // DOSSIER XII // AUCUN HASARD
+        </footer>
     </div>
-
-    <footer>
-        BASE DE DONNÉES SÉCURISÉE - DOSSIER XII - AUCUN HASARD DÉTECTÉ
-    </footer>
 
 </body>
 </html>
