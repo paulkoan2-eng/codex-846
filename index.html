@@ -3,53 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C O D E X - ARCHIVES SYSTÉMIQUES</title>
+    <title>C O D E X - SYSTÈME D'INFORMATION UNIVERSEL</title>
     <style>
         :root { 
             --deep-green: #1a261b; 
-            --grid-green: #243425;
+            --grid-line: #243425;
             --gold: #8ba888; 
             --paper: #f4f1ea; 
             --ink: #1a261b; 
         }
         
-        body { 
-            font-family: 'Georgia', serif; 
-            background-color: var(--paper); 
-            margin: 0; 
-            padding-bottom: 50px; 
-        }
+        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; }
 
-        /* Le Header stylé avec quadrillage et formules */
+        /* HEADER VERT PROFOND AVEC QUADRILLAGE ET FORMULES */
         header { 
             text-align: center; 
             padding: 80px 20px; 
             background-color: var(--deep-green);
             background-image: 
-                linear-gradient(var(--grid-green) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-green) 1px, transparent 1px);
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
             background-size: 30px 30px;
             color: var(--paper); 
             border-bottom: 5px solid var(--gold);
             position: relative;
-            overflow: hidden;
         }
 
-        /* Simulation des formules en fond */
-        header::before {
+        /* Formules flottantes dans le header */
+        header::after {
             content: "Φ = 1.618... | λ = c/f | E=mc² | 432Hz";
             position: absolute;
-            top: 20px;
-            left: 10px;
-            opacity: 0.1;
+            top: 15px;
+            right: 20px;
+            opacity: 0.15;
             font-family: monospace;
-            font-size: 2rem;
-            width: 150%;
-            transform: rotate(-5deg);
+            font-size: 1.5rem;
             pointer-events: none;
         }
 
-        .logo { font-size: 3rem; letter-spacing: 15px; margin: 0; font-weight: bold; text-shadow: 0 0 10px rgba(139, 168, 136, 0.5); }
+        .logo { font-size: 3rem; letter-spacing: 15px; margin: 0; font-weight: bold; }
         .subtitle { font-size: 0.9rem; letter-spacing: 4px; opacity: 0.7; margin-top: 15px; text-transform: uppercase; }
 
         .manifeste { 
@@ -61,18 +53,16 @@
             font-weight: bold; 
             text-transform: uppercase; 
             letter-spacing: 2px;
-            background: rgba(0,0,0,0.2);
-            padding: 20px;
-            border: 1px solid rgba(139, 168, 136, 0.3);
         }
 
-        .container { max-width: 950px; margin: -30px auto 0; padding: 20px; position: relative; z-index: 10; }
+        .container { max-width: 950px; margin: 40px auto; padding: 20px; }
 
+        /* DOSSIERS CRÈME */
         .dossier { 
             background: #fff; 
             border: 1px solid #d1ccbb; 
-            margin-bottom: 15px; 
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.1); 
+            margin-bottom: 12px; 
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
         }
 
         .dossier-header { 
@@ -87,28 +77,33 @@
             font-size: 0.9rem; 
             letter-spacing: 1px;
             border-left: 5px solid var(--deep-green);
-            transition: 0.3s;
         }
 
-        .dossier-header:hover { 
-            background: var(--deep-green); 
-            color: var(--gold); 
+        .tag { font-size: 0.65rem; background: var(--deep-green); color: var(--gold); padding: 4px 10px; }
+
+        /* CONTENU AVEC QUADRILLAGE VERT INTÉRIEUR */
+        .dossier-content { 
+            display: none; 
+            padding: 30px; 
+            background-color: var(--deep-green);
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--paper);
+            line-height: 1.8;
         }
 
-        .tag { font-size: 0.65rem; background: var(--gold); color: var(--deep-green); padding: 4px 10px; font-weight: bold; }
-
-        .dossier-content { display: none; padding: 35px; border-top: 1px solid #eee; line-height: 1.8; font-size: 1.05rem; }
-
-        .formula-box {
-            background: #f9f7f0;
-            border: 1px dashed var(--gold);
-            padding: 15px;
-            margin: 15px 0;
+        .math-highlight {
+            color: var(--gold);
             font-family: 'Courier New', monospace;
-            color: var(--ink);
+            border-left: 3px solid var(--gold);
+            padding-left: 15px;
+            margin: 15px 0;
         }
 
-        footer { text-align: center; padding: 60px; font-size: 0.8rem; letter-spacing: 2px; color: var(--ink); }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; letter-spacing: 1px; color: var(--ink); }
+        a { color: var(--gold); font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -117,49 +112,58 @@
     <div class="logo">C O D E X</div>
     <div class="subtitle">SYSTÈME D'INFORMATION UNIVERSEL</div>
     <div class="manifeste">
-        "JE NE CONTREDIS PERSONNE, JE COMPLÈTE.<br>
-        REGARDEZ LES FAITS, LES CALCULS. IL N'Y A PAS DE HASARD."
+        LE CODEX RÉTABLIT LA PÉRENNITÉ DU VIVANT PAR LA MESURE.
     </div>
 </header>
 
 <div class="container">
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggle('d1')"><span>I. L'EAU : POROSITÉ & RATIO PHI</span><span class="tag">FLUX</span></div>
+        <div class="dossier-header" onclick="toggle('d1')"><span>I. GÉOMÉTRIE SACRÉE (GIZEH & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
         <div id="d1" class="dossier-content">
-            L'optimisation des flux suit une constante universelle. Le sol doit suivre cette structure pour boire 100L/h.
-            <div class="formula-box">Calcul de perméabilité : Φ (1.618) / m² = Absorption Optimale.</div>
+            La Grande Pyramide encode les dimensions de la Terre.
+            <div class="math-highlight">Ratio : 1 / 43 200 | Rayon Polaire détecté.</div>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggle('d2')"><span>II. RÉSONANCE : POUMONS & RIVIÈRES</span><span class="tag">BIOLOGIE</span></div>
+        <div class="dossier-header" onclick="toggle('d2')"><span>II. LA TERRE ÉLECTRIQUE</span><span class="tag">ÉNERGIE</span></div>
         <div id="d2" class="dossier-content">
-            Observation de la résonance fractale entre le système respiratoire humain et les réseaux hydrographiques terrestres.
-            <div class="formula-box">Algorithme de ramification : Identité source détectée à 99.8%.</div>
+            Analyse de la conductivité des sols en granite et calcaire.
+            <div class="math-highlight">Piézoélectricité du granite = Stabilité énergétique.</div>
         </div>
     </div>
 
     <div class="dossier">
-        <div class="dossier-header" onclick="toggle('d3')"><span>III. PATHOLOGIE : LA SURMOBILITÉ</span><span class="tag">ALERTE</span></div>
+        <div class="dossier-header" onclick="toggle('d3')"><span>III. L'EAU : POROSITÉ & RATIO PHI</span><span class="tag">FLUX</span></div>
         <div id="d3" class="dossier-content">
-            L'hyper-mobilité humaine sature les flux et empêche l'amnésie régionale. L'organisme Terre ne peut plus isoler les zones pour cicatriser.
-            <div class="formula-box">Saturation Cinétique = Rupture du cycle de régénération.</div>
+            L'optimisation des flux suit la spirale du nombre d'or.
+            <div class="math-highlight">Φ = 1.618 | Capacité optimale : 100L/h.</div>
         </div>
     </div>
 
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d4')"><span>IV. LES VENTS & COURANTS</span><span class="tag">CLIMAT</span></div><div id="d4" class="dossier-content">Circulation des énergies cinétiques terrestres.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d5')"><span>V. LES MINÉRAUX</span><span class="tag">STRUCTURE</span></div><div id="d5" class="dossier-content">Stockage d'information dans la structure cristalline.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d6')"><span>VI. LA FLORE FRACTALE</span><span class="tag">VIE</span></div><div id="d6" class="dossier-content">Algorithmes de croissance végétale.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d7')"><span>VII. LA FAUNE & RÉSONANCE</span><span class="tag">INSTINCT</span></div><div id="d7" class="dossier-content">Champs morphiques et comportements collectifs.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d8')"><span>VIII. L'HUMAIN CELLULAIRE</span><span class="tag">BIOLOGIE</span></div><div id="d8" class="dossier-content">L'être humain comme unité fonctionnelle du système.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d9')"><span>IX. LES FRÉQUENCES SOLAIRES</span><span class="tag">ASTRO</span></div><div id="d9" class="dossier-content">Impact des cycles solaires sur la biosphère.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d10')"><span>X. L'ARCHITECTURE ANCIENNE</span><span class="tag">BÂTISSEURS</span></div><div id="d10" class="dossier-content">Harmonisation par la géométrie sacrée.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d11')"><span>XI. LA MÉMOIRE DES LIEUX</span><span class="tag">INFO</span></div><div id="d11" class="dossier-content">Stockage des événements dans la structure du sol.</div></div>
+
     <div class="dossier">
-        <div class="dossier-header" onclick="toggle('d12')"><span>XII. LEXIQUE DES BÂTISSEURS</span><span class="tag">INDEX</span></div>
+        <div class="dossier-header" onclick="toggle('d12')"><span>XII. LEXIQUE : LE DICTIONNAIRE DU RÉVEIL</span><span class="tag">GUIDE</span></div>
         <div id="d12" class="dossier-content">
-            <strong>BÂTISSEUR :</strong> Accordeur de piano universel.<br>
-            <strong>AMNÉSIE RÉGIONALE :</strong> Capacité d'un système à s'isoler pour guérir.
+            <div class="math-highlight"><strong>SURMOBILITÉ :</strong> Agression cinétique empêchant l'amnésie régionale.</div>
+            <div class="math-highlight"><strong>DOSSIER XII :</strong> La preuve par la résonance (Poumons / Rivières).</div>
+            <div class="math-highlight"><strong>BÂTISSEUR :</strong> Accordeur de piano universel.</div>
         </div>
     </div>
 
 </div>
 
 <footer>
-    TRANSMISSION EN DIRECT : <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a><br><br>
+    TRANSMISSION EN DIRECT SUR <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a><br>
     © ARCHIVES DU CODEX - AUCUN HASARD DÉTECTÉ
 </footer>
 
@@ -176,8 +180,6 @@
 
 </body>
 </html>
-
-
 
 
 
