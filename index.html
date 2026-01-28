@@ -3,113 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODEX - DOSSIER XII</title>
+    <title>CODEX - Système d'Information Universel</title>
     <style>
-        body {
-            background-color: #050a12;
-            color: #e0e0e0;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
+        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; --accent: #d1ccbb; }
+        
+        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; overflow-x: hidden; }
+
+        /* Effet Star Wars / Intro */
+        .intro-container {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQcKt6OUUUrJTsfx_Fsbu3Imu2IxHsFY_YvaDopixPqjIqQ70KxealovOmVyOaR0E_ak62StfbCMndHkwFzZTBATGEO6PEg1X2RlZTwL7FT6iYvkOw');
+            background-size: cover;
+            background-position: center;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            perspective: 400px;
+            overflow: hidden;
+            border-bottom: 5px solid var(--gold);
         }
 
-        .container {
-            max-width: 900px;
-            padding: 40px 20px;
+        .star-wars-text {
+            color: #f2e8c9;
+            font-weight: bold;
             text-align: center;
+            transform: rotateX(25deg);
+            animation: scroll 40s linear infinite;
+            font-size: 1.5rem;
+            line-height: 2;
+            width: 80%;
         }
 
-        .main-image {
-            width: 100%;
-            border: 1px solid #1a3a5a;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
-            margin-bottom: 20px;
+        @keyframes scroll {
+            0% { transform: rotateX(25deg) translateY(100%); }
+            100% { transform: rotateX(25deg) translateY(-200%); }
         }
 
-        .quote {
-            font-style: italic;
-            font-size: 1.4rem;
-            color: #ffcc00;
-            margin: 40px 0;
-            line-height: 1.6;
-        }
-
-        .chapter-section {
-            text-align: left;
-            background: rgba(26, 58, 90, 0.1);
-            border-left: 3px solid #00d4ff;
-            padding: 20px;
-            margin: 40px 0;
-        }
-
-        .chapter-title {
-            color: #00d4ff;
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: block;
-            letter-spacing: 2px;
-        }
-
-        .link-section {
-            margin-top: 50px;
-            padding: 20px;
-            border-top: 1px solid #1a3a5a;
-            width: 100%;
-        }
-
-        a {
-            color: #00d4ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #4a4a4a;
-        }
-
-        strong {
-            color: #ffffff;
-        }
+        header { text-align: center; padding: 40px 20px; background: var(--ink); color: var(--paper); }
+        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
+        
+        /* Styles des Dossiers (gardés du précédent) */
+        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); }
+        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; }
+        .dossier-content { display: none; padding: 30px; border-top: 1px solid #eee; line-height: 1.8; }
+        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="CODEX DOSSIER XII" class="main-image">
+<header>
+    <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
+    <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
+</header>
 
-        <div class="quote">
-            "Je ne contredis personne, je complète. <br>
-            Regardez les faits, les calculs. Il n'y a pas de hasard !"
-        </div>
-
-        <div class="chapter-section">
-            <span class="chapter-title">[CHAPITRE : LA SURMOBILITÉ]</span>
-            <p>
-                L'hyper-mobilité de l'être humain fait partie des pollutions les plus importantes. 
-                Elle sature les flux et engendre une impossibilité de réaliser une <strong>amnésie régionale</strong>.
-            </p>
-            <p>
-                Résultat : L'organisme Terre ne peut plus isoler une zone pour la cicatriser. Le trauma est maintenu artificiellement à l'échelle globale.
-            </p>
-        </div>
-
-        <div class="link-section">
-            <p>Accéder au Codex : <a href="https://paulkoan2-eng.github.io/codex-846/">paulkoan2-eng.github.io/codex-846/</a></p>
-            <p>Suivre la transmission : <a href="https://www.twitch.tv/superfixs" target="_blank">twitch.tv/superfixs</a></p>
-        </div>
-
-        <footer>
-            SÉCURISÉ // DOSSIER XII // AUCUN HASARD
-        </footer>
+<div class="intro-container">
+    <div class="star-wars-text">
+        <p>IL Y A BIEN LONGTEMPS...</p>
+        <p>DANS UN MONDE DÉCONNECTÉ,</p>
+        <p>LES BÂTISSEURS ONT LAISSÉ DES TRACES.</p>
+        <p>LA GÉOMÉTRIE DU TOURNESOL,</p>
+        <p>LE RATIO PHI DE L'EAU,</p>
+        <p>LA FRÉQUENCE DE L'HYDROGÈNE.</p>
+        <p>TOUT ÉTAIT SOUS NOS YEUX.</p>
+        <p>IL EST TEMPS DE SE RÉVEILLER.</p>
+        <p>LE CODEX EST VOTRE GUIDE.</p>
     </div>
+</div>
+
+<div class="container">
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t3')"><span>III. L'Eau : Porosité & Ratio Phi</span></div>
+        <div id="t3" class="dossier-content">
+            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQcKt6OUUUrJTsfx_Fsbu3Imu2IxHsFY_YvaDopixPqjIqQ70KxealovOmVyOaR0E_ak62StfbCMndHkwFzZTBATGEO6PEg1X2RlZTwL7FT6iYvkOw" style="width:100%; border-radius:10px; margin-bottom:20px;">
+            <p>Regardez cette spirale. C'est l'optimisation absolue de l'espace. Le sol doit suivre cette structure pour boire 100L/h.</p>
+        </div>
+    </div>
+    
+    </div>
+
+<script>
+    function toggleDossier(id) {
+        var content = document.getElementById(id);
+        var allDossiers = document.getElementsByClassName('dossier-content');
+        for (var i = 0; i < allDossiers.length; i++) {
+            if (allDossiers[i].id !== id) { allDossiers[i].style.display = 'none'; }
+        }
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+</script>
 
 </body>
 </html>
+
+
 
 
 
