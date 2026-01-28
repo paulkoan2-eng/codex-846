@@ -6,7 +6,7 @@
     <title>CODEX - DOSSIER XII</title>
     <style>
         body {
-            background-color: #050a12;
+            background-color: #02050a;
             color: #e0e0e0;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -24,7 +24,7 @@
         .main-image {
             width: 100%;
             border: 1px solid #1a3a5a;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
             margin-bottom: 20px;
         }
 
@@ -34,55 +34,48 @@
             color: #ffcc00;
             margin: 40px 0;
             line-height: 1.6;
+            cursor: pointer;
         }
 
-        .chapter-section {
-            text-align: left;
+        /* Système de Dossiers */
+        .dossier {
             background: rgba(26, 58, 90, 0.1);
-            border-left: 3px solid #00d4ff;
-            padding: 20px;
-            margin: 20px 0;
+            border: 1px solid #1a3a5a;
+            margin-bottom: 10px;
+            text-align: left;
         }
 
-        .chapter-title {
+        .dossier-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            background: rgba(26, 58, 90, 0.3);
             color: #00d4ff;
             font-weight: bold;
-            margin-bottom: 10px;
-            display: block;
-            letter-spacing: 2px;
+            display: flex;
+            justify-content: space-between;
             text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .dossier-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #1a3a5a;
+            line-height: 1.6;
         }
 
         .math-block {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border: 1px dashed #1a3a5a;
+            background: rgba(0, 0, 0, 0.5);
             color: #8ba888;
-            font-size: 0.9rem;
+            padding: 15px;
             margin-top: 10px;
+            border-left: 3px solid #8ba888;
+            font-size: 0.9rem;
         }
 
-        .link-section {
-            margin-top: 50px;
-            padding: 20px;
-            border-top: 1px solid #1a3a5a;
-            width: 100%;
-        }
-
-        a {
-            color: #00d4ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #4a4a4a;
-        }
-
-        strong { color: #ffffff; }
+        a { color: #00d4ff; text-decoration: none; font-weight: bold; }
+        footer { margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #4a4a4a; letter-spacing: 2px; }
+        strong { color: #fff; }
     </style>
 </head>
 <body>
@@ -95,38 +88,44 @@
             Regardez les faits, les calculs. Il n'y a pas de hasard !"
         </div>
 
-        <div class="chapter-section">
-            <span class="chapter-title">I. L'EAU : POROSITÉ & RATIO PHI</span>
-            <p>L'optimisation des flux suit une constante universelle. Le sol doit suivre cette structure pour boire 100L/h.</p>
-            <div class="math-block">Ratio Phi : 1.618... / Structure Fractale d'Absorption.</div>
+        <div class="dossier">
+            <div class="dossier-header" onclick="toggle('ch1')"><span>I. L'EAU : RATIO PHI</span><span>[+]</span></div>
+            <div id="ch1" class="dossier-content">
+                L'optimisation des flux suit une constante universelle. Le sol doit suivre cette structure pour boire 100L/h.
+                <div class="math-block">Ratio Phi : 1.618... / Géométrie de survie détectée.</div>
+            </div>
         </div>
 
-        <div class="chapter-section">
-            <span class="chapter-title">II. DOSSIER XII : RÉSONANCE BIOLOGIQUE</span>
-            <p>La ressemblance entre l'arbre pulmonaire et les deltas fluviaux est mathématique. Code source identique entre l'Humain et la Terre.</p>
-            <div class="math-block">Échange gazeux (Poumons) = Échange minéral (Deltas). Hasard : 0%.</div>
+        <div class="dossier">
+            <div class="dossier-header" onclick="toggle('ch2')"><span>II. DOSSIER XII : RÉSONANCE</span><span>[+]</span></div>
+            <div id="ch2" class="dossier-content">
+                La ressemblance entre l'arbre pulmonaire et les deltas fluviaux est mathématique. Code source identique entre l'Humain et la Terre.
+                <div class="math-block">Échange gazeux = Échange minéral. Hasard : 0%.</div>
+            </div>
         </div>
 
-        <div class="chapter-section">
-            <span class="chapter-title">III. PATHOLOGIE : LA SURMOBILITÉ</span>
-            <p>
-                L'hyper-mobilité humaine sature les flux et engendre une impossibilité de réaliser une <strong>amnésie régionale</strong>.
-            </p>
-            <p>
-                L'organisme Terre ne peut plus s'isoler pour cicatriser. Le trauma est maintenu globalement.
-            </p>
+        <div class="dossier">
+            <div class="dossier-header" onclick="toggle('ch3')"><span>III. PATHOLOGIE : SURMOBILITÉ</span><span>[+]</span></div>
+            <div id="ch3" class="dossier-content">
+                L'hyper-mobilité humaine sature les flux et empêche l'<strong>amnésie régionale</strong>. L'organisme Terre ne peut plus s'isoler pour cicatriser.
+                <div class="math-block">ALERTE : Trauma maintenu à l'échelle globale.</div>
+            </div>
         </div>
 
-        <div class="link-section">
-            <p>Accéder au Codex : <a href="https://paulkoan2-eng.github.io/codex-846/">paulkoan2-eng.github.io/codex-846/</a></p>
-            <p>Suivre la transmission : <a href="https://www.twitch.tv/superfixs" target="_blank">twitch.tv/superfixs</a></p>
+        <div style="margin-top: 40px;">
+            <p>Direct : <a href="https://www.twitch.tv/superfixs" target="_blank">twitch.tv/superfixs</a></p>
+            <p>Codex : <a href="https://paulkoan2-eng.github.io/codex-846/">paulkoan2-eng.github.io/codex-846/</a></p>
         </div>
 
-        <footer>
-            SÉCURISÉ // DOSSIER XII // AUCUN HASARD DÉTECTÉ
-        </footer>
+        <footer>SÉCURISÉ // DOSSIER XII // AUCUN HASARD</footer>
     </div>
 
+    <script>
+        function toggle(id) {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
 
