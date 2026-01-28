@@ -54,7 +54,7 @@
             letter-spacing: 2px;
         }
 
-        /* LE BOUTON INTERROGER */
+        /* LE BOUTON INTERROGER CORRIGÉ */
         .btn-archive { 
             display: inline-block; 
             padding: 15px 40px; 
@@ -101,7 +101,7 @@
 
         .tag { font-size: 0.65rem; background: var(--deep-green); color: var(--gold); padding: 4px 10px; }
 
-        /* CONTENU AVEC QUADRILLAGE VERT INTÉRIEUR */
+        /* CONTENU AVEC QUADRILLAGE VERT */
         .dossier-content { 
             display: none; 
             padding: 30px; 
@@ -123,7 +123,6 @@
         }
 
         footer { text-align: center; padding: 40px; font-size: 0.8rem; letter-spacing: 1px; color: var(--ink); }
-        a { color: var(--gold); font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -134,11 +133,10 @@
     <div class="manifeste">
         LE CODEX RÉTABLIT LA PÉRENNITÉ DU VIVANT PAR LA MESURE.
     </div>
-    <a href="paulkoan2@gmail.com" class="btn-archive">INTERROGER L'ARCHIVE</a>
+    <a href="mailto:paulkoan2@gmail.com" class="btn-archive">INTERROGER L'ARCHIVE</a>
 </header>
 
 <div class="container">
-
     <div class="dossier">
         <div class="dossier-header" onclick="toggle('d1')"><span>I. GÉOMÉTRIE SACRÉE (GIZEH & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
         <div id="d1" class="dossier-content">La Grande Pyramide encode les dimensions de la Terre. <div class="math-highlight">Ratio : 1 / 43 200</div></div>
@@ -154,7 +152,7 @@
         <div id="d3" class="dossier-content">L'optimisation des flux suit la spirale du nombre d'or Φ.</div>
     </div>
 
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d4')"><span>IV. LES VENTS & COURANTS</span><span class="tag">CLIMAT</span></div><div id="d4" class="dossier-content">Circulation des énergies cinétiques.</div></div>
+    <div class="dossier"><div class="dossier-header" onclick="toggle('d4')"><span>IV. LES VENTS & COURANTS</span><span class="tag">CLIMAT</span></div><div id="d4" class="dossier-content">Circulation des énergies terrestres.</div></div>
     <div class="dossier"><div class="dossier-header" onclick="toggle('d5')"><span>V. LES MINÉRAUX</span><span class="tag">STRUCTURE</span></div><div id="d5" class="dossier-content">Stockage d'information cristalline.</div></div>
     <div class="dossier"><div class="dossier-header" onclick="toggle('d6')"><span>VI. LA FLORE FRACTALE</span><span class="tag">VIE</span></div><div id="d6" class="dossier-content">Algorithmes de croissance végétale.</div></div>
     <div class="dossier"><div class="dossier-header" onclick="toggle('d7')"><span>VII. LA FAUNE & RÉSONANCE</span><span class="tag">INSTINCT</span></div><div id="d7" class="dossier-content">Champs morphiques collectifs.</div></div>
@@ -170,11 +168,10 @@
             <div class="math-highlight"><strong>DOSSIER XII :</strong> Résonance (Poumons / Rivières).</div>
         </div>
     </div>
-
 </div>
 
 <footer>
-    TRANSMISSION EN DIRECT SUR <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a><br>
+    TRANSMISSION EN DIRECT : <a href="https://www.twitch.tv/superfixs" target="_blank" style="color:var(--gold)">TWITCH.TV/SUPERFIXS</a><br>
     © ARCHIVES DU CODEX - AUCUN HASARD DÉTECTÉ
 </footer>
 
@@ -188,7 +185,6 @@
         content.style.display = (content.style.display === "block") ? "none" : "block";
     }
 </script>
-
 </body>
 </html>
 
