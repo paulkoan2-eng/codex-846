@@ -3,125 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODEX - Système d'Information Universel</title>
+    <title>CODEX - DOSSIER XII</title>
     <style>
-        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; --accent: #d1ccbb; }
-        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; padding-bottom: 50px; }
-        header { text-align: center; padding: 60px 20px; background: var(--ink); color: var(--paper); border-bottom: 8px double var(--gold); }
-        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
-        .manifeste { font-size: 1.2rem; line-height: 1.6; color: var(--gold); max-width: 700px; margin: 30px auto; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid #333; padding-top: 20px; }
-        .archive-intro { text-align: center; margin-bottom: 40px; font-style: italic; color: #555; }
-        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); overflow: hidden; }
-        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s; }
-        .dossier-header:hover { background: var(--gold); color: white; }
-        .dossier-content { display: none; padding: 30px; border-top: 1px solid #eee; line-height: 1.8; }
-        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 10px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; }
-        .tag { font-size: 0.7rem; background: var(--ink); color: var(--gold); padding: 4px 10px; border-radius: 2px; }
-        .btn-contact { display: inline-block; margin-top: 20px; padding: 15px 30px; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; letter-spacing: 2px; }
-        .btn-contact:hover { background: var(--gold); color: var(--ink); }
-        img { max-width: 100%; height: auto; border-radius: 5px; margin: 10px 0; }
+        body {
+            background-color: #050a12;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #1a3a5a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            color: #00d4ff;
+            text-shadow: 0 0 10px #00d4ff;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-image {
+            width: 100%;
+            border: 2px solid #1a3a5a;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #ffcc00;
+            margin: 40px 0;
+            line-height: 1.6;
+        }
+
+        .dossier-section {
+            background: rgba(26, 58, 90, 0.2);
+            border-left: 4px solid #00d4ff;
+            padding: 25px;
+            text-align: left;
+            margin-top: 50px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        h2 {
+            color: #00d4ff;
+            text-transform: uppercase;
+        }
+
+        .data-point {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #4a4a4a;
+            border-top: 1px solid #1a3a5a;
+            width: 100%;
+            text-align: center;
+        }
+
+        .highlight {
+            color: #00d4ff;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
-    <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
-    <div class="manifeste">
-        L'HUMANITÉ N'EST PAS EN CRISE, ELLE EST DÉCONNECTÉE.<br>
-        LE CODEX RÉTABLIT LA PÉRENNITÉ DU VIVANT PAR LA MESURE.
-    </div>
-    <a href="mailto:paulkoan2@gmail.com" class="btn-contact">INTERROGER L'ARCHIVE</a>
-</header>
+    <header>
+        <div class="logo">CODEX : DOSSIER XII</div>
+    </header>
 
-<div class="container">
-    <p class="archive-intro">"La nature ne crée rien de temporaire, elle ne construit que pour durer."</p>
+    <div class="container">
+        <img src="https://images.weserv.nl/?url=http://googleusercontent.com/image_generation_content/15" alt="Preuve Visuelle Codex" class="main-image">
 
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t1')"><span>I. Géométrie Sacrée (Gizeh & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
-        <div id="t1" class="dossier-content"><p>La Grande Pyramide encode la Terre. Ce n'est pas une théorie, c'est une mesure d'ingénieur.</p><div class="math-block">Ratio Hémisphère Nord : 1 / 43 200<br>Hauteur x 43 200 = Rayon Polaire (6 356 km)</div></div>
-    </div>
+        <div class="quote">
+            "Je ne contredis personne, je complète. <br>
+            Regardez les faits, les calculs. Il n'y a pas de hasard !"
+        </div>
 
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t2')"><span>II. La Terre Électrique (Granite vs Calcaire)</span><span class="tag">MATÉRIAUX</span></div>
-        <div id="t2" class="dossier-content"><p>Le sol est une architecture énergétique stable.</p><div class="math-block"><strong>GRANITE :</strong> Émetteur piézoélectrique (La Pile).<br><strong>CALCAIRE :</strong> Diffuseur et tampon de pH (Le Circuit).</div></div>
-    </div>
+        <div class="dossier-section">
+            <h2>ALERTE SYSTÉMIQUE : LA SURMOBILITÉ</h2>
+            <p class="data-point">[ÉTAT DU SYSTÈME] : AGITATION CRITIQUE</p>
+            <p>
+                L'hyper-mobilité de l'être humain constitue aujourd'hui la pollution la plus invisible et la plus dévastatrice. 
+                En saturant tous les flux naturels, nous avons brisé un mécanisme vital de la Terre : <span class="highlight">L'AMNÉSIE RÉGIONALE</span>.
+            </p>
+            <p>
+                <strong>Conséquence :</strong> L'organisme terrestre est incapable d'isoler une zone pour la cicatriser. La connexion permanente force une infection globale. Le système ne peut plus "oublier" le trauma pour se régénérer.
+            </p>
+        </div>
 
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t3')"><span>III. L'Eau : Porosité & Ratio Phi</span><span class="tag">STRUCTURE</span></div>
-        <div id="t3" class="dossier-content"><p>L'eau suit la structure du vide (Nombre d'Or). C'est cette géométrie qui permet à la terre de durer sans érosion.</p><div class="math-block">Sol Codex : 100L/h/m² d'absorption via structure fractale.</div></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t4')"><span>IV. Les Animaux : Accélérateurs de Temps</span><span class="tag">BIOLOGIE</span></div>
-        <div id="t4" class="dossier-content"><p>L'animal est le moteur thermique indispensable au cycle éternel de la matière.</p></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t5')"><span>V. L'Humain : Le Gardien de la Pérennité</span><span class="tag">MISSION</span></div>
-        <div id="t5" class="dossier-content"><p>L'Humain n'est pas un exploitant, c'est l'ajusteur de fréquences. Sa mission est de restaurer les conditions de pérennité naturelle.</p></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t6')"><span>VI. L'Espace : L'Horloge Cosmique</span><span class="tag">ALIGNEMENT</span></div>
-        <div id="t6" class="dossier-content"><div class="math-block">Vitesse Lumière (c) = 299 792 458 m/s<br>Latitude Sommet Gizeh = 29.9792458 °N</div></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t7')"><span>VII. L'Unification : Le Vecteur Hydrogène</span><span class="tag">CLEF FINALE</span></div>
-        <div id="t7" class="dossier-content"><div class="math-block">Fréquence Hydrogène : 1420.405 MHz<br>Longueur d'onde : 21.106 cm</div></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t8')"><span>VIII. Rapport : Régulation Climatique</span><span class="tag">APPLICATION</span></div>
-        <div id="t8" class="dossier-content"><p>Rétablir la capacité tampon de la planète en épousant les lois de la physique.</p></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t9')"><span>IX. Intégrité : Science vs Mesure</span><span class="tag">ÉTHIQUE</span></div>
-        <div id="t9" class="dossier-content"><p>L'intégrité exige d'accepter les mesures brutes, même si elles contredisent le dogme actuel.</p></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t10')"><span>X. Analyse : La Fenêtre de Synchronisation</span><span class="tag">CALCUL</span></div>
-        <div id="t10" class="dossier-content"><div class="math-block">Fenêtre d'action restante : ~9 ans.</div></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t11')"><span>XI. Énergie : Fusion vs Résonance</span><span class="tag">PROSPECTIVE</span></div>
-        <div id="t11" class="dossier-content"><p>Vers une souveraineté énergétique basée sur l'accord harmonique de l'hydrogène.</p></div>
-    </div>
-
-    <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t12')"><span>XII. Lexique : Le Dictionnaire du Réveil</span><span class="tag">POUR TOUS</span></div>
-        <div id="t12" class="dossier-content">
-            <p><i>Pour que tout le monde, des plus jeunes aux plus sages, comprenne le message sans barrière de langage.</i></p>
-            <div class="math-block"><strong>BÂTISSEUR :</strong> Comme un <b>"accordeur de piano"</b>. Action de régler une construction pour qu'elle soit en harmonie avec la nature.</div>
-            <div class="math-block"><strong>HYDROGÈNE (VECTEUR) :</strong> Le <b>"Wi-Fi de l'Univers"</b>. Transporteur d'énergie entre étoiles et cellules.</div>
-            <div class="math-block"><strong>RÉSONANCE :</strong> Comme une <b>"balançoire"</b>. Pousser au bon moment pour gagner de la force sans effort.</div>
-            <div class="math-block"><strong>STRUCTURE FRACTALE :</strong> Un dessin qui se répète (ex: tournesol). La forme du zéro déchet.</div>
-            <div class="math-block"><strong>PIÉZOÉLECTRICITÉ :</strong> Quand on appuie sur un cristal (granite) et qu'il crée de l'électricité. La <b>"pile"</b> naturelle.</div>
-            <div class="math-block"><strong>RATIO PHI (NOMBRE D'OR) :</strong> La <b>"recette secrète"</b> de la nature pour durer.</div>
-            <div class="math-block"><strong>AMNÉSIE GÉOGRAPHIQUE :</strong> Refuser d'assembler le <b>"puzzle"</b> car les pièces viennent de boîtes différentes.</div>
-            <div class="math-block"><strong>EFFET TAMPON :</strong> Capacité à <b>"encaisser les coups"</b> (sécheresse) comme une éponge géante.</div>
+        <div class="dossier-section" style="border-left-color: #ff3300;">
+            <h2>TRANSMISSION EN DIRECT</h2>
+            <p>Rejoignez le décodage en temps réel sur Twitch : <br>
+            <a href="https://www.twitch.tv/superfixs" style="color: #00d4ff; text-decoration: none;">twitch.tv/superfixs</a></p>
         </div>
     </div>
 
-</div>
-
-<script>
-    function toggleDossier(id) {
-        var content = document.getElementById(id);
-        var allDossiers = document.getElementsByClassName('dossier-content');
-        for (var i = 0; i < allDossiers.length; i++) {
-            if (allDossiers[i].id !== id) { allDossiers[i].style.display = 'none'; }
-        }
-        content.style.display = (content.style.display === "block") ? "none" : "block";
-    }
-</script>
+    <footer>
+        © PROPRIÉTÉ DU CODEX - RÉVÉLATION EN COURS - AUCUN HASARD DÉTECTÉ
+    </footer>
 
 </body>
 </html>
+
 
 
 
