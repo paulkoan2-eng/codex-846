@@ -1,3 +1,8 @@
+C'est un excellent choix. Ce design "vieux papier / archive" avec l'intro animée donne une immersion incroyable. J'ai repris ta structure exacte et j'ai intégré tous les chapitres (l'Eau, les Poumons/Rivières et la Surmobilité) à l'intérieur des dossiers dépliants.
+
+Voici le code complet prêt à l'emploi :
+HTML
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +17,7 @@
         /* Effet Star Wars / Intro */
         .intro-container {
             height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQcKt6OUUUrJTsfx_Fsbu3Imu2IxHsFY_YvaDopixPqjIqQ70KxealovOmVyOaR0E_ak62StfbCMndHkwFzZTBATGEO6PEg1X2RlZTwL7FT6iYvkOw');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1000');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -27,7 +32,7 @@
             font-weight: bold;
             text-align: center;
             transform: rotateX(25deg);
-            animation: scroll 40s linear infinite;
+            animation: scroll 45s linear infinite;
             font-size: 1.5rem;
             line-height: 2;
             width: 80%;
@@ -35,17 +40,24 @@
 
         @keyframes scroll {
             0% { transform: rotateX(25deg) translateY(100%); }
-            100% { transform: rotateX(25deg) translateY(-200%); }
+            100% { transform: rotateX(25deg) translateY(-250%); }
         }
 
         header { text-align: center; padding: 40px 20px; background: var(--ink); color: var(--paper); }
         .container { max-width: 950px; margin: 0 auto; padding: 20px; }
         
-        /* Styles des Dossiers (gardés du précédent) */
+        /* Styles des Dossiers */
         .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); }
-        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; }
-        .dossier-content { display: none; padding: 30px; border-top: 1px solid #eee; line-height: 1.8; }
+        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eee; }
+        .dossier-header:hover { background: #f0ede4; }
+        .dossier-content { display: none; padding: 30px; line-height: 1.8; }
+        
+        .quote-box { border-left: 4px solid var(--gold); padding-left: 20px; font-style: italic; margin: 20px 0; color: #444; }
         .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 20px 0; border-left: 6px solid var(--gold); }
+        img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid #ddd; }
+        
+        .footer-info { text-align: center; padding: 40px; font-size: 0.9rem; opacity: 0.7; }
+        a { color: var(--gold); font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -62,23 +74,69 @@
         <p>LES BÂTISSEURS ONT LAISSÉ DES TRACES.</p>
         <p>LA GÉOMÉTRIE DU TOURNESOL,</p>
         <p>LE RATIO PHI DE L'EAU,</p>
-        <p>LA FRÉQUENCE DE L'HYDROGÈNE.</p>
+        <p>L'AMNÉSIE DES RÉGIONS.</p>
         <p>TOUT ÉTAIT SOUS NOS YEUX.</p>
         <p>IL EST TEMPS DE SE RÉVEILLER.</p>
         <p>LE CODEX EST VOTRE GUIDE.</p>
+        <p>REGARDEZ LES CALCULS.</p>
+        <p>Y'A PAS DE HASARD.</p>
     </div>
 </div>
 
 <div class="container">
+
     <div class="dossier">
-        <div class="dossier-header" onclick="toggleDossier('t3')"><span>III. L'Eau : Porosité & Ratio Phi</span></div>
-        <div id="t3" class="dossier-content">
-            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQcKt6OUUUrJTsfx_Fsbu3Imu2IxHsFY_YvaDopixPqjIqQ70KxealovOmVyOaR0E_ak62StfbCMndHkwFzZTBATGEO6PEg1X2RlZTwL7FT6iYvkOw" style="width:100%; border-radius:10px; margin-bottom:20px;">
-            <p>Regardez cette spirale. C'est l'optimisation absolue de l'espace. Le sol doit suivre cette structure pour boire 100L/h.</p>
+        <div class="dossier-header" onclick="toggleDossier('d1')"><span>I. La Règle d'Or</span></div>
+        <div id="d1" class="dossier-content" style="display: block;"> <div class="quote-box">
+                "Je ne contredis personne, je complète. Regardez les faits, les calculs. Il n'y a pas de hasard !"
+            </div>
+            <p>Le Codex n'est pas une croyance, c'est une observation factuelle du système d'information universel.</p>
         </div>
     </div>
-    
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('d2')"><span>II. L'Eau : Porosité & Ratio Phi</span></div>
+        <div id="d2" class="dossier-content">
+            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Géométrie Sacrée">
+            <p>Regardez cette spirale. C'est l'optimisation absolue de l'espace. Le sol doit suivre cette structure pour boire 100L/h.</p>
+            <div class="math-block">
+                Ratio Phi détecté dans les flux hydrographiques : 1.618... <br>
+                Capacité d'absorption optimale = Structure Fractale.
+            </div>
+        </div>
     </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('d3')"><span>III. Dossier XII : Résonance Biologique</span></div>
+        <div id="d3" class="dossier-content">
+            <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="Comparaison Poumons Rivières">
+            <p>La ressemblance n'est pas flagrante ? Elle est mathématique. Nos poumons et les deltas des fleuves partagent le même algorithme de distribution de l'énergie et de l'oxygène.</p>
+            <div class="math-block">
+                Arbre Bronchique = Réseau Hydrographique <br>
+                Fonction : Échange gazeux / Échange minéral. <br>
+                Hasard : 0%
+            </div>
+        </div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('d4')"><span>IV. Pathologie : La Surmobilité</span></div>
+        <div id="d4" class="dossier-content">
+            <p><strong>ALERTE SYSTÉMIQUE :</strong> L'hyper-mobilité humaine est la pollution la plus grave du système.</p>
+            <p>En saturant les flux, nous avons supprimé la capacité de la Terre à réaliser une <strong>amnésie régionale</strong>.</p>
+            <div class="math-block">
+                Impossibilité d'isolation = Impossibilité de cicatrisation.<br>
+                Le trauma devient global et permanent.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-info">
+    <p>TRANSMISSION EN COURS SUR <a href="https://www.twitch.tv/superfixs" target="_blank">TWITCH.TV/SUPERFIXS</a></p>
+    <p>© BÂTISSEURS DU CODEX - AUCUN HASARD DÉTECTÉ</p>
+</div>
 
 <script>
     function toggleDossier(id) {
