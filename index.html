@@ -15,7 +15,6 @@
         
         body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; }
 
-        /* HEADER VERT PROFOND AVEC QUADRILLAGE */
         header { 
             text-align: center; 
             padding: 80px 20px; 
@@ -54,7 +53,6 @@
             letter-spacing: 2px;
         }
 
-        /* LE BOUTON INTERROGER CORRIGÉ */
         .btn-archive { 
             display: inline-block; 
             padding: 15px 40px; 
@@ -69,15 +67,10 @@
             margin-top: 20px;
         }
 
-        .btn-archive:hover { 
-            background-color: var(--gold); 
-            color: var(--deep-green);
-            box-shadow: 0 0 15px var(--gold);
-        }
+        .btn-archive:hover { background-color: var(--gold); color: var(--deep-green); box-shadow: 0 0 15px var(--gold); }
 
         .container { max-width: 950px; margin: 40px auto; padding: 20px; }
 
-        /* DOSSIERS CRÈME */
         .dossier { 
             background: #fff; 
             border: 1px solid #d1ccbb; 
@@ -101,7 +94,6 @@
 
         .tag { font-size: 0.65rem; background: var(--deep-green); color: var(--gold); padding: 4px 10px; }
 
-        /* CONTENU AVEC QUADRILLAGE VERT */
         .dossier-content { 
             display: none; 
             padding: 30px; 
@@ -137,41 +129,77 @@
 </header>
 
 <div class="container">
+
     <div class="dossier">
         <div class="dossier-header" onclick="toggle('d1')"><span>I. GÉOMÉTRIE SACRÉE (GIZEH & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
-        <div id="d1" class="dossier-content">La Grande Pyramide encode les dimensions de la Terre. <div class="math-highlight">Ratio : 1 / 43 200</div></div>
+        <div id="d1" class="dossier-content">La Grande Pyramide encode les dimensions de la Terre. <div class="math-highlight">Ratio : 1 / 43 200 | Rayon Polaire détecté.</div></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggle('d2')"><span>II. LA TERRE ÉLECTRIQUE</span><span class="tag">ÉNERGIE</span></div>
-        <div id="d2" class="dossier-content">Analyse de la conductivité des sols en granite et calcaire.</div>
+        <div id="d2" class="dossier-content">Le sol est une architecture énergétique stable. <div class="math-highlight">GRANITE : Pile piézoélectrique. CALCAIRE : Tampon pH.</div></div>
     </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggle('d3')"><span>III. L'EAU : POROSITÉ & RATIO PHI</span><span class="tag">FLUX</span></div>
-        <div id="d3" class="dossier-content">L'optimisation des flux suit la spirale du nombre d'or Φ.</div>
+        <div id="d3" class="dossier-content">L'optimisation des flux suit la spirale du nombre d'or Φ. <div class="math-highlight">Absorption optimale : 100L/h/m².</div></div>
     </div>
 
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d4')"><span>IV. LES VENTS & COURANTS</span><span class="tag">CLIMAT</span></div><div id="d4" class="dossier-content">Circulation des énergies terrestres.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d5')"><span>V. LES MINÉRAUX</span><span class="tag">STRUCTURE</span></div><div id="d5" class="dossier-content">Stockage d'information cristalline.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d6')"><span>VI. LA FLORE FRACTALE</span><span class="tag">VIE</span></div><div id="d6" class="dossier-content">Algorithmes de croissance végétale.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d7')"><span>VII. LA FAUNE & RÉSONANCE</span><span class="tag">INSTINCT</span></div><div id="d7" class="dossier-content">Champs morphiques collectifs.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d8')"><span>VIII. L'HUMAIN CELLULAIRE</span><span class="tag">BIOLOGIE</span></div><div id="d8" class="dossier-content">L'humain comme cellule de l'organisme Terre.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d9')"><span>IX. LES FRÉQUENCES SOLAIRES</span><span class="tag">ASTRO</span></div><div id="d9" class="dossier-content">Cycles solaires et biosphère.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d10')"><span>X. L'ARCHITECTURE ANCIENNE</span><span class="tag">BÂTISSEURS</span></div><div id="d10" class="dossier-content">Harmonisation par la géométrie sacrée.</div></div>
-    <div class="dossier"><div class="dossier-header" onclick="toggle('d11')"><span>XI. LA MÉMOIRE DES LIEUX</span><span class="tag">INFO</span></div><div id="d11" class="dossier-content">Stockage des événements dans le sol.</div></div>
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d4')"><span>IV. LES VENTS & COURANTS</span><span class="tag">CLIMAT</span></div>
+        <div id="d4" class="dossier-content">Circulation des énergies cinétiques et équilibre thermique global.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d5')"><span>V. LES MINÉRAUX</span><span class="tag">STRUCTURE</span></div>
+        <div id="d5" class="dossier-content">Cristallisation et stockage d'information au sein de la croûte terrestre.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d6')"><span>VI. LA FLORE FRACTALE</span><span class="tag">VIE</span></div>
+        <div id="d6" class="dossier-content">Algorithmes de croissance végétale basés sur la suite de Fibonacci.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d7')"><span>VII. LA FAUNE & RÉSONANCE</span><span class="tag">INSTINCT</span></div>
+        <div id="d7" class="dossier-content">Champs morphiques et comportements collectifs en résonance avec le sol.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d8')"><span>VIII. L'HUMAIN CELLULAIRE</span><span class="tag">BIOLOGIE</span></div>
+        <div id="d8" class="dossier-content">L'être humain comme unité fonctionnelle et cellule de l'organisme Terre.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d9')"><span>IX. LES FRÉQUENCES SOLAIRES</span><span class="tag">ASTRO</span></div>
+        <div id="d9" class="dossier-content">Impact des cycles solaires et des vents stellaires sur la biosphère.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d10')"><span>X. L'ARCHITECTURE ANCIENNE</span><span class="tag">BÂTISSEURS</span></div>
+        <div id="d10" class="dossier-content">Harmonisation des lieux et des flux par la géométrie sacrée appliquée.</div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggle('d11')"><span>XI. LA MÉMOIRE DES LIEUX</span><span class="tag">INFO</span></div>
+        <div id="d11" class="dossier-content">Capacité de stockage des événements historiques dans la structure minérale.</div>
+    </div>
 
     <div class="dossier">
         <div class="dossier-header" onclick="toggle('d12')"><span>XII. LEXIQUE : LE DICTIONNAIRE DU RÉVEIL</span><span class="tag">GUIDE</span></div>
         <div id="d12" class="dossier-content">
-            <div class="math-highlight"><strong>SURMOBILITÉ :</strong> Empêche l'amnésie régionale.</div>
-            <div class="math-highlight"><strong>DOSSIER XII :</strong> Résonance (Poumons / Rivières).</div>
+            <div class="math-highlight"><strong>BÂTISSEUR :</strong> Accordeur de piano universel. Celui qui aligne la matière sur les fréquences du vivant.</div>
+            <div class="math-highlight"><strong>SURMOBILITÉ :</strong> Agression cinétique saturant les flux, empêchant la Terre de cicatriser.</div>
+            <div class="math-highlight"><strong>AMNÉSIE RÉGIONALE :</strong> Capacité vitale d'un organisme à isoler une zone traumatisée pour la guérir.</div>
+            <div class="math-highlight"><strong>RÉSONANCE :</strong> Identité source. Exemple : Arbre pulmonaire (Humain) = Deltas fluviaux (Terre).</div>
+            <div class="math-highlight"><strong>RATIO PHI (1.618) :</strong> La constante d'optimisation universelle. Sans elle, rien ne dure.</div>
         </div>
     </div>
+
 </div>
 
 <footer>
-    TRANSMISSION EN DIRECT : <a href="https://www.twitch.tv/superfixs" target="_blank" style="color:var(--gold)">TWITCH.TV/SUPERFIXS</a><br>
+    TRANSMISSION : <a href="https://www.twitch.tv/superfixs" target="_blank" style="color:var(--gold)">TWITCH.TV/SUPERFIXS</a><br>
     © ARCHIVES DU CODEX - AUCUN HASARD DÉTECTÉ
 </footer>
 
@@ -187,8 +215,6 @@
 </script>
 </body>
 </html>
-
-
 
 
 
