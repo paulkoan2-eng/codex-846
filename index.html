@@ -3,129 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODEX - DOSSIER XII</title>
+    <title>CODEX - Système d'Information Universel</title>
     <style>
-        body {
-            background-color: #02050a;
-            color: #e0e0e0;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 900px;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .main-image {
-            width: 100%;
-            border: 1px solid #1a3a5a;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
-            margin-bottom: 20px;
-        }
-
-        .quote {
-            font-style: italic;
-            font-size: 1.4rem;
-            color: #ffcc00;
-            margin: 40px 0;
-            line-height: 1.6;
-            cursor: pointer;
-        }
-
-        /* Système de Dossiers */
-        .dossier {
-            background: rgba(26, 58, 90, 0.1);
-            border: 1px solid #1a3a5a;
-            margin-bottom: 10px;
-            text-align: left;
-        }
-
-        .dossier-header {
-            padding: 15px 20px;
-            cursor: pointer;
-            background: rgba(26, 58, 90, 0.3);
-            color: #00d4ff;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .dossier-content {
-            display: none;
-            padding: 20px;
-            border-top: 1px solid #1a3a5a;
-            line-height: 1.6;
-        }
-
-        .math-block {
-            background: rgba(0, 0, 0, 0.5);
-            color: #8ba888;
-            padding: 15px;
-            margin-top: 10px;
-            border-left: 3px solid #8ba888;
-            font-size: 0.9rem;
-        }
-
-        a { color: #00d4ff; text-decoration: none; font-weight: bold; }
-        footer { margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #4a4a4a; letter-spacing: 2px; }
-        strong { color: #fff; }
+        :root { --gold: #8ba888; --paper: #f4f1ea; --ink: #1a261b; --accent: #d1ccbb; }
+        body { font-family: 'Georgia', serif; background-color: var(--paper); color: var(--ink); margin: 0; padding-bottom: 50px; }
+        header { text-align: center; padding: 60px 20px; background: var(--ink); color: var(--paper); border-bottom: 8px double var(--gold); }
+        .container { max-width: 950px; margin: 0 auto; padding: 20px; }
+        .manifeste { font-size: 1.2rem; line-height: 1.6; color: var(--gold); max-width: 700px; margin: 30px auto; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid #333; padding-top: 20px; }
+        .archive-intro { text-align: center; margin-bottom: 40px; font-style: italic; color: #555; }
+        .dossier { background: #fff; border: 1px solid var(--accent); margin-bottom: 15px; box-shadow: 4px 4px 0px var(--accent); overflow: hidden; }
+        .dossier-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fcfaf2; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.2s; }
+        .dossier-header:hover { background: var(--gold); color: white; }
+        .dossier-content { display: none; padding: 30px; border-top: 1px solid #eee; line-height: 1.8; }
+        .math-block { background: #1a261b; color: var(--gold); padding: 20px; font-family: 'Courier New', monospace; margin: 10px 0; border-left: 6px solid var(--gold); font-size: 0.95rem; }
+        .tag { font-size: 0.7rem; background: var(--ink); color: var(--gold); padding: 4px 10px; border-radius: 2px; }
+        .btn-contact { display: inline-block; margin-top: 20px; padding: 15px 30px; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; letter-spacing: 2px; }
+        .btn-contact:hover { background: var(--gold); color: var(--ink); }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="https://i.ibb.co/Lzf7DTr/codex-main.jpg" alt="CODEX DOSSIER XII" class="main-image">
+<header>
+    <h1 style="letter-spacing: 8px; margin: 0;">C O D E X</h1>
+    <p style="letter-spacing: 2px; opacity: 0.8;">ARCHIVES DE LA VÉRITÉ OUBLIÉE</p>
+    <div class="manifeste">
+        L'HUMANITÉ N'EST PAS EN CRISE, ELLE EST DÉCONNECTÉE.<br>
+        LE CODEX RÉTABLIT LA PÉRENNITÉ DU VIVANT PAR LA MESURE.
+    </div>
+    <a href="mailto:paulkoan2@gmail.com" class="btn-contact">INTERROGER L'ARCHIVE</a>
+</header>
 
-        <div class="quote">
-            "Je ne contredis personne, je complète. <br>
-            Regardez les faits, les calculs. Il n'y a pas de hasard !"
-        </div>
+<div class="container">
+    <p class="archive-intro">"La nature ne crée rien de temporaire, elle ne construit que pour durer."</p>
 
-        <div class="dossier">
-            <div class="dossier-header" onclick="toggle('ch1')"><span>I. L'EAU : RATIO PHI</span><span>[+]</span></div>
-            <div id="ch1" class="dossier-content">
-                L'optimisation des flux suit une constante universelle. Le sol doit suivre cette structure pour boire 100L/h.
-                <div class="math-block">Ratio Phi : 1.618... / Géométrie de survie détectée.</div>
-            </div>
-        </div>
-
-        <div class="dossier">
-            <div class="dossier-header" onclick="toggle('ch2')"><span>II. DOSSIER XII : RÉSONANCE</span><span>[+]</span></div>
-            <div id="ch2" class="dossier-content">
-                La ressemblance entre l'arbre pulmonaire et les deltas fluviaux est mathématique. Code source identique entre l'Humain et la Terre.
-                <div class="math-block">Échange gazeux = Échange minéral. Hasard : 0%.</div>
-            </div>
-        </div>
-
-        <div class="dossier">
-            <div class="dossier-header" onclick="toggle('ch3')"><span>III. PATHOLOGIE : SURMOBILITÉ</span><span>[+]</span></div>
-            <div id="ch3" class="dossier-content">
-                L'hyper-mobilité humaine sature les flux et empêche l'<strong>amnésie régionale</strong>. L'organisme Terre ne peut plus s'isoler pour cicatriser.
-                <div class="math-block">ALERTE : Trauma maintenu à l'échelle globale.</div>
-            </div>
-        </div>
-
-        <div style="margin-top: 40px;">
-            <p>Direct : <a href="https://www.twitch.tv/superfixs" target="_blank">twitch.tv/superfixs</a></p>
-            <p>Codex : <a href="https://paulkoan2-eng.github.io/codex-846/">paulkoan2-eng.github.io/codex-846/</a></p>
-        </div>
-
-        <footer>SÉCURISÉ // DOSSIER XII // AUCUN HASARD</footer>
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t1')"><span>I. Géométrie Sacrée (Gizeh & 432)</span><span class="tag">DÉCRYPTÉ</span></div>
+        <div id="t1" class="dossier-content"><p>La Grande Pyramide encode la Terre.</p><div class="math-block">Ratio Hémisphère Nord : 1 / 43 200<br>Hauteur x 43 200 = Rayon Polaire</div></div>
     </div>
 
-    <script>
-        function toggle(id) {
-            var e = document.getElementById(id);
-            e.style.display = (e.style.display === 'block') ? 'none' : 'block';
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t2')"><span>II. La Terre Électrique (Granite vs Calcaire)</span><span class="tag">MATÉRIAUX</span></div>
+        <div id="t2" class="dossier-content"><p>Le sol est une architecture énergétique stable.</p><div class="math-block">GRANITE : Pile piézoélectrique. CALCAIRE : Tampon pH.</div></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t3')"><span>III. L'Eau : Porosité & Ratio Phi</span><span class="tag">STRUCTURE</span></div>
+        <div id="t3" class="dossier-content"><p>L'eau suit la structure fractale du nombre d'or.</p><div class="math-block">Absorption optimale : 100L/h/m².</div></div>
+    </div>
+
+    <div class="dossier">
+        <div class="dossier-header" onclick="toggleDossier('t12')"><span>XII. Lexique : Le Dictionnaire du Réveil</span><span class="tag">POUR TOUS</span></div>
+        <div id="t12" class="dossier-content">
+            <div class="math-block"><strong>BÂTISSEUR :</strong> Accordeur de piano universel.</div>
+            <div class="math-block"><strong>RÉSONANCE :</strong> Pousser la balançoire au bon moment.</div>
+            <div class="math-block"><strong>RATIO PHI :</strong> La recette secrète pour durer.</div>
+            <div class="math-block"><strong>AMNÉSIE GÉOGRAPHIQUE :</strong> Refuser d'assembler le puzzle.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDossier(id) {
+        var content = document.getElementById(id);
+        var allDossiers = document.getElementsByClassName('dossier-content');
+        for (var i = 0; i < allDossiers.length; i++) {
+            if (allDossiers[i].id !== id) { allDossiers[i].style.display = 'none'; }
         }
-    </script>
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+</script>
+
 </body>
 </html>
 
